@@ -11,7 +11,7 @@ Description: "This is a draft **LM for CDA**. (It still requires modifications c
 
 * ^version = "0.1.0"
 * ^abstract = false
-* ^type = "http://vitals.oemig.de/fhir/StructureDefinition/CDAtemplate"
+* ^type = "http://bloodpressure.oemig.de/fhir/StructureDefinition/CDAtemplate"
 * insert HeaderDetailRules
 
 * classCode 1..1 CodeableConcept "class code"
@@ -76,21 +76,21 @@ Description: "This is a draft **LM for CDA**. (It still requires modifications c
 
   * exertion 0..1 BackboneElement "exertion during measurement"
     * classCode 1..1 CodeableConcept "class code"
-    * classCode = http://vitals.oemig.de/fhir/CodeSystem/ObservationCodes#exertion
+    * classCode = http://bloodpressure.oemig.de/fhir/CodeSystem/ObservationCodes#exertion
     * value 0..* CodeableConcept "exertion during measurement"
-    * value from http://vitals.oemig.de/fhir/ValueSet/Exertion (required)
+    * value from http://bloodpressure.oemig.de/fhir/ValueSet/Exertion (required)
 
   * location 0..1 BackboneElement "location of measurement"
     * classCode 1..1 CodeableConcept "class code"
-    * classCode = http://vitals.oemig.de/fhir/CodeSystem/ObservationCodes#location
+    * classCode = http://bloodpressure.oemig.de/fhir/CodeSystem/ObservationCodes#location
     * value 0..* CodeableConcept "exertion during measurement"
-    * value from http://vitals.oemig.de/fhir/ValueSet/Location (required)
+    * value from http://bloodpressure.oemig.de/fhir/ValueSet/Location (required)
 
-  * sleepStatus 0..1 CodeableConcept "sleep status during measurement"
+  * consciousness 0..1 CodeableConcept "sleep status during measurement"
     * classCode 1..1 CodeableConcept "class code"
-    * classCode = http://vitals.oemig.de/fhir/CodeSystem/ObservationCodes#consciousness
+    * classCode = http://bloodpressure.oemig.de/fhir/CodeSystem/ObservationCodes#consciousness
     * value 0..* CodeableConcept "exertion during measurement"
-    * value from http://vitals.oemig.de/fhir/ValueSet/Consciousness (required)
+    * value from http://bloodpressure.oemig.de/fhir/ValueSet/Consciousness (required)
 
 * participant 0..* BackboneElement "participants"
   * subject 0..1 SU Reference(Patient) "patient"

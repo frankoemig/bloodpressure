@@ -6,7 +6,7 @@ Description: "**Blood Pressure according to ISiK**"
 
 * ^version = "0.1.0"
 * ^abstract = false
-//* ^type = "http://vitals.oemig.de/fhir/StructureDefinition/Observation-IsikBloodPressure"
+//* ^type = "http://bloodpressure.oemig.de/fhir/StructureDefinition/Observation-IsikBloodPressure"
 * . ^definition = "Blood Pressure Profile according to ISiK"
 
 * insert HeaderDetailRules

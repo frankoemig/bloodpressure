@@ -1,6 +1,6 @@
 Alias: $loinc = http://loinc.org
 Alias: $us-core-vital-signs = http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs
-Alias: $category = http://vitals.oemig.de/fhir/CodeSystem/ObservationCategory
+Alias: $category = http://bloodpressure.oemig.de/fhir/CodeSystem/ObservationCategory
 
 //Alias: $SleepStatusExt = http://hl7.org/fhir/us/vitals/StructureDefinition/SleepStatusExt
 //Alias: $ExerciseAssociationExt = http://hl7.org/fhir/us/vitals/StructureDefinition/ExerciseAssociationExt
@@ -74,7 +74,7 @@ Description: """
 
 * component[SystolicBP] ^short = "Systolic Blood Pressure"
 * component[SystolicBP].code 1..1 MS
-* component[SystolicBP].code from http://vitals.oemig.de/fhir/ValueSet/us-core-systolic-blood-pressure-code (required)
+* component[SystolicBP].code from http://bloodpressure.oemig.de/fhir/ValueSet/us-core-systolic-blood-pressure-code (required)
 * component[SystolicBP].code ^short = "Systolic Blood Pressure Code"
 * component[SystolicBP].valueQuantity only Quantity
 * component[SystolicBP].valueQuantity MS
@@ -92,7 +92,7 @@ Description: """
 
 * component[DiastolicBP] ^short = "Diastolic Blood Pressure"
 * component[DiastolicBP].code 1..1 MS
-* component[DiastolicBP].code from http://vitals.oemig.de/fhir/ValueSet/us-core-diastolic-blood-pressure-code (required)
+* component[DiastolicBP].code from http://bloodpressure.oemig.de/fhir/ValueSet/us-core-diastolic-blood-pressure-code (required)
 * component[DiastolicBP].code ^short = "Diastolic Blood Pressure Code"
 * component[DiastolicBP].valueQuantity only Quantity
 * component[DiastolicBP].valueQuantity MS
@@ -110,7 +110,7 @@ Description: """
 
 * component[MeanArterialBP] ^short = "Mean Arterial Blood Pressure"
 * component[MeanArterialBP].code 1..1 MS
-* component[MeanArterialBP].code from http://vitals.oemig.de/fhir/ValueSet/us-core-mean-arterial-blood-pressure-code (required)
+* component[MeanArterialBP].code from http://bloodpressure.oemig.de/fhir/ValueSet/us-core-mean-arterial-blood-pressure-code (required)
 * component[MeanArterialBP].code ^short = "Mean Arterial Blood Pressure Code"
 * component[MeanArterialBP].valueQuantity only Quantity
 * component[MeanArterialBP].valueQuantity MS
@@ -129,7 +129,7 @@ Description: """
 
 * component[PulsePressureBP] ^short = "Pulse Blood Pressure"
 * component[PulsePressureBP].code 1..1 MS
-* component[PulsePressureBP].code from http://vitals.oemig.de/fhir/ValueSet/us-core-pulse-blood-pressure-code (required)
+* component[PulsePressureBP].code from http://bloodpressure.oemig.de/fhir/ValueSet/us-core-pulse-blood-pressure-code (required)
 * component[PulsePressureBP].code ^short = "Mean Arterial Blood Pressure Code"
 * component[PulsePressureBP].valueQuantity only Quantity
 * component[PulsePressureBP].valueQuantity MS
@@ -148,72 +148,72 @@ Description: """
 * component[BodyPosition] ^short = "Position of the Body during measurement"
 * component[BodyPosition].code 1..1 MS
 * component[BodyPosition].code ^short = "Body Position Code"
-* component[BodyPosition].code from http://vitals.oemig.de/fhir/ValueSet/ObservationCodes (required)
+* component[BodyPosition].code from http://bloodpressure.oemig.de/fhir/ValueSet/ObservationCodes (required)
 * component[BodyPosition].code.coding.code = #bodyPosition
 * component[BodyPosition].valueCodeableConcept.coding only Coding
 * component[BodyPosition].valueCodeableConcept.coding MS
 * component[BodyPosition].valueCodeableConcept.coding ^short = "Position of the Body"
 * component[BodyPosition].valueCodeableConcept.coding.system 1..1 MS
 * component[BodyPosition].valueCodeableConcept.coding.system only uri
-* component[BodyPosition].valueCodeableConcept.coding.system = "http://vitals.oemig.de/fhir/CodeSystem/BodyPosition" (exactly)
+* component[BodyPosition].valueCodeableConcept.coding.system = "http://bloodpressure.oemig.de/fhir/CodeSystem/BodyPosition" (exactly)
 * component[BodyPosition].valueCodeableConcept.coding.code 1..1 MS
-* component[BodyPosition].valueCodeableConcept.coding.code from http://vitals.oemig.de/fhir/ValueSet/BodyPosition (required)
+* component[BodyPosition].valueCodeableConcept.coding.code from http://bloodpressure.oemig.de/fhir/ValueSet/BodyPosition (required)
 
 //* component[BodyPosition].valueCodeableConcept.coding.code = #mm[Hg] (exactly)
 
 * component[Location] ^short = "Location of the Body during measurement"
 * component[Location].code 1..1 MS
 * component[Location].code ^short = "Location Code"
-* component[Location].code from http://vitals.oemig.de/fhir/ValueSet/ObservationCodes (required)
+* component[Location].code from http://bloodpressure.oemig.de/fhir/ValueSet/ObservationCodes (required)
 * component[Location].code.coding.code = #bodyPosition
 * component[Location].valueCodeableConcept.coding only Coding
 * component[Location].valueCodeableConcept.coding MS
 * component[Location].valueCodeableConcept.coding ^short = "Location of the Body"
 * component[Location].valueCodeableConcept.coding.system 1..1 MS
 * component[Location].valueCodeableConcept.coding.system only uri
-* component[Location].valueCodeableConcept.coding.system = "http://vitals.oemig.de/fhir/CodeSystem/Location" (exactly)
+* component[Location].valueCodeableConcept.coding.system = "http://bloodpressure.oemig.de/fhir/CodeSystem/Location" (exactly)
 * component[Location].valueCodeableConcept.coding.code 1..1 MS
-* component[Location].valueCodeableConcept.coding.code from http://vitals.oemig.de/fhir/ValueSet/Location (required)
+* component[Location].valueCodeableConcept.coding.code from http://bloodpressure.oemig.de/fhir/ValueSet/Location (required)
 
 
 * component[Consciousness] ^short = "Consciousness during measurement"
 * component[Consciousness].code 1..1 MS
 * component[Consciousness].code ^short = "Consciousness Code"
-* component[Consciousness].code from http://vitals.oemig.de/fhir/ValueSet/ObservationCodes (required)
+* component[Consciousness].code from http://bloodpressure.oemig.de/fhir/ValueSet/ObservationCodes (required)
 * component[Consciousness].code.coding.code = #consciousness
 * component[Consciousness].valueCodeableConcept.coding only Coding
 * component[Consciousness].valueCodeableConcept.coding MS
 * component[Consciousness].valueCodeableConcept.coding ^short = "Consciousness"
 * component[Consciousness].valueCodeableConcept.coding.system 1..1 MS
 * component[Consciousness].valueCodeableConcept.coding.system only uri
-* component[Consciousness].valueCodeableConcept.coding.system = "http://vitals.oemig.de/fhir/CodeSystem/Consciousness" (exactly)
+* component[Consciousness].valueCodeableConcept.coding.system = "http://bloodpressure.oemig.de/fhir/CodeSystem/Consciousness" (exactly)
 * component[Consciousness].valueCodeableConcept.coding.code 1..1 MS
-* component[Consciousness].valueCodeableConcept.coding.code from http://vitals.oemig.de/fhir/ValueSet/Consciousness (required)
+* component[Consciousness].valueCodeableConcept.coding.code from http://bloodpressure.oemig.de/fhir/ValueSet/Consciousness (required)
 
 * component[CuffType] ^short = "Cuff Type used during measurement"
 * component[CuffType].code 1..1 MS
 * component[CuffType].code ^short = "Cuff Type Code"
-* component[CuffType].code.coding.system = "http://vitals.oemig.de/fhir/CodeSystem/ObservationCodes"
+* component[CuffType].code.coding.system = "http://bloodpressure.oemig.de/fhir/CodeSystem/ObservationCodes"
 * component[CuffType].code.coding.code = #cuffType
 * component[CuffType].valueCodeableConcept.coding only Coding
 * component[CuffType].valueCodeableConcept.coding MS
 * component[CuffType].valueCodeableConcept.coding ^short = "Cuff Type"
 * component[CuffType].valueCodeableConcept.coding.system 1..1 MS
 * component[CuffType].valueCodeableConcept.coding.system only uri
-* component[CuffType].valueCodeableConcept.coding.system = "http://vitals.oemig.de/fhir/CodeSystem/CuffType" (exactly)
+* component[CuffType].valueCodeableConcept.coding.system = "http://bloodpressure.oemig.de/fhir/CodeSystem/CuffType" (exactly)
 * component[CuffType].valueCodeableConcept.coding.code 1..1 MS
-* component[CuffType].valueCodeableConcept.coding.code from http://vitals.oemig.de/fhir/ValueSet/CuffType (required)
+* component[CuffType].valueCodeableConcept.coding.code from http://bloodpressure.oemig.de/fhir/ValueSet/CuffType (required)
 
 * component[CuffSize] ^short = "Cuff Size used during measurement"
 * component[CuffSize].code 1..1 MS
 * component[CuffSize].code ^short = "Cuff Size Code"
-* component[CuffSize].code.coding.system = "http://vitals.oemig.de/fhir/CodeSystem/ObservationCodes"
+* component[CuffSize].code.coding.system = "http://bloodpressure.oemig.de/fhir/CodeSystem/ObservationCodes"
 * component[CuffSize].code.coding.code = #cuffSize
 * component[CuffSize].valueCodeableConcept.coding only Coding
 * component[CuffSize].valueCodeableConcept.coding MS
 * component[CuffSize].valueCodeableConcept.coding ^short = "CuffSize"
 * component[CuffSize].valueCodeableConcept.coding.system 1..1 MS
 * component[CuffSize].valueCodeableConcept.coding.system only uri
-* component[CuffSize].valueCodeableConcept.coding.system = "http://vitals.oemig.de/fhir/CodeSystem/CuffSize" (exactly)
+* component[CuffSize].valueCodeableConcept.coding.system = "http://bloodpressure.oemig.de/fhir/CodeSystem/CuffSize" (exactly)
 * component[CuffSize].valueCodeableConcept.coding.code 1..1 MS
-* component[CuffSize].valueCodeableConcept.coding.code from http://vitals.oemig.de/fhir/ValueSet/CuffSize (required)
+* component[CuffSize].valueCodeableConcept.coding.code from http://bloodpressure.oemig.de/fhir/ValueSet/CuffSize (required)

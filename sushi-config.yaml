@@ -9,7 +9,7 @@ name: Blood-Pressure
 title: Blood Pressure Cross-Country Cross-Language Cross-Paradigm (Demo) IG
 description: Cross-Country, cross-paradigm Demo-Implementation Guide for Blood Pressure Measurements
 status: draft # draft | active | retired | unknown
-version: 0.1.1
+version: 0.1.2
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2024+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -47,8 +47,26 @@ publisher:
 pages:
   index.md:
     title: Blood Pressure Measurements
-  download.md:
-    title: Download
+  content.md:
+    title: Content Definition
+  model.md:
+    title: Information Model
+  process.md:
+    title: Process
+  its.md:
+    title: ITS
+    v2.md:
+      title: V2 Profiling
+    cda.md:
+      title: CDA Profiling
+    fhir.md:
+      title: FHIR Profiling
+  other.md:
+    title: Other
+    references.md:
+      title: References
+    download.md:
+      title: Download
 #   implementation.xml:
 #   examples.xml:
 #     title: Examples Overview
@@ -79,8 +97,18 @@ pages:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
+  Content: 
+    Defintions: content.html
+    Information Model: model.html
+  Process: process.html
+  ITS:
+    v2 Profiling: v2.html
+    CDA Profiling: cda.html
+    FHIR Profiling: fhir.html
   Artifacts: artifacts.html
-  Download: download.html
+  Other:
+    Download: download.html
+    References: references.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │

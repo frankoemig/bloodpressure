@@ -1,6 +1,6 @@
 Alias: $loinc = http://loinc.org
 Alias: $us-core-vital-signs = http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs
-Alias: $category = http://vitals.oemig.de/fhir/CodeSystem/ObservationCategory
+Alias: $category = http://bloodpressure.oemig.de/fhir/CodeSystem/ObservationCategory
 
 //Alias: $SleepStatusExt = http://hl7.org/fhir/us/vitals/StructureDefinition/SleepStatusExt
 //Alias: $ExerciseAssociationExt = http://hl7.org/fhir/us/vitals/StructureDefinition/ExerciseAssociationExt
@@ -36,7 +36,7 @@ Description: """
 * status from ObservationStatus (required)
 
 * category only CodeableConcept
-* category from http://vitals.oemig.de/fhir/ValueSet/ObservationVitalSignsCategory (required)
+* category from http://bloodpressure.oemig.de/fhir/ValueSet/ObservationVitalSignsCategory (required)
 
 * code MS
 
@@ -138,7 +138,7 @@ Providing the floor for standards development for specific use cases promotes in
   * extension contains SystolicExt named systolicCategory 0..1 MS 
   * extension[systolicCategory] ^short = "systolic"  
 * component[SystolicBP].code 1..1 MS
-* component[SystolicBP].code from http://vitals.oemig.de/fhir/ValueSet/us-core-systolic-blood-pressure-code (required)
+* component[SystolicBP].code from http://bloodpressure.oemig.de/fhir/ValueSet/us-core-systolic-blood-pressure-code (required)
 * component[SystolicBP].code ^short = "Systolic Blood Pressure Code"
 * component[SystolicBP].valueQuantity only Quantity
 * component[SystolicBP].valueQuantity MS
@@ -158,7 +158,7 @@ Providing the floor for standards development for specific use cases promotes in
   * extension contains DiastolicExt named diastolicCategory 0..1 MS 
   * extension[diastolicCategory] ^short = "diastolic"
 * component[DiastolicBP].code 1..1 MS
-* component[DiastolicBP].code from http://vitals.oemig.de/fhir/ValueSet/us-core-diastolic-blood-pressure-code (required)
+* component[DiastolicBP].code from http://bloodpressure.oemig.de/fhir/ValueSet/us-core-diastolic-blood-pressure-code (required)
 * component[DiastolicBP].code ^short = "Diastolic Blood Pressure Code"
 * component[DiastolicBP].valueQuantity only Quantity
 * component[DiastolicBP].valueQuantity MS
@@ -176,7 +176,7 @@ Providing the floor for standards development for specific use cases promotes in
 
 * component[MeanArterialBP] ^short = "Mean Arterial Blood Pressure"
 * component[MeanArterialBP].code 1..1 MS
-* component[MeanArterialBP].code from http://vitals.oemig.de/fhir/ValueSet/us-core-mean-arterial-blood-pressure-code (required)
+* component[MeanArterialBP].code from http://bloodpressure.oemig.de/fhir/ValueSet/us-core-mean-arterial-blood-pressure-code (required)
 * component[MeanArterialBP].code ^short = "Mean Arterial Blood Pressure Code"
 * component[MeanArterialBP].valueQuantity only Quantity
 * component[MeanArterialBP].valueQuantity MS
@@ -195,7 +195,7 @@ Providing the floor for standards development for specific use cases promotes in
 
 * component[PulsePressureBP] ^short = "Pulse Blood Pressure"
 * component[PulsePressureBP].code 1..1 MS
-* component[PulsePressureBP].code from http://vitals.oemig.de/fhir/ValueSet/us-core-pulse-blood-pressure-code (required)
+* component[PulsePressureBP].code from http://bloodpressure.oemig.de/fhir/ValueSet/us-core-pulse-blood-pressure-code (required)
 * component[PulsePressureBP].code ^short = "Mean Arterial Blood Pressure Code"
 * component[PulsePressureBP].valueQuantity only Quantity
 * component[PulsePressureBP].valueQuantity MS
@@ -223,7 +223,7 @@ Description: "Systolic"
 * ^context[+].type = #element
 * ^context[=].expression = "StructureDefinition"
 * value[x] only CodeableConcept
-* value[x] from http://vitals.oemig.de/fhir/ValueSet/ObservationCategory (required)
+* value[x] from http://bloodpressure.oemig.de/fhir/ValueSet/ObservationCategory (required)
 
 Extension: DiastolicExt
 Id:        diastolicExt
@@ -233,7 +233,7 @@ Description: "Disastolic"
 * ^context[+].type = #element
 * ^context[=].expression = "StructureDefinition"
 * value[x] only CodeableConcept
-* value[x] from http://vitals.oemig.de/fhir/ValueSet/ObservationCategory (required)
+* value[x] from http://bloodpressure.oemig.de/fhir/ValueSet/ObservationCategory (required)
 
 
 
@@ -246,7 +246,7 @@ Description: "Exertion"
 * ^context[+].type = #element
 * ^context[=].expression = "StructureDefinition"
 * value[x] only CodeableConcept
-* value[x] from http://vitals.oemig.de/fhir/ValueSet/Exertion (required)
+* value[x] from http://bloodpressure.oemig.de/fhir/ValueSet/Exertion (required)
 
 
 Extension: ConsciousnessExt
@@ -257,7 +257,7 @@ Description: "Consciousness"
 * ^context[+].type = #element
 * ^context[=].expression = "StructureDefinition"
 * value[x] only CodeableConcept
-* value[x] from http://vitals.oemig.de/fhir/ValueSet/Consciousness (required)
+* value[x] from http://bloodpressure.oemig.de/fhir/ValueSet/Consciousness (required)
 
 
 
