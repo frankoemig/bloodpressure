@@ -109,6 +109,9 @@ Description: "This is the Logical Model for **Blood Pressure**"
 * anaesthesia 0..1 CodeableConcept "Anaesthesia of patient during measurement"
 * anaesthesia from http://bloodpressure.oemig.de/fhir/ValueSet/Anaesthesia (required)
 
+* measurementSetting 0..1 CodeableConcept "The setting in which the measurement was performed; i.e. at home, at clinic, at emergency room, etc."
+* measurementSetting from MeasurementSettingVS (extensible)
+
 //* bodyWeight 0..1 BodyWeight "body weight"
 
 * medication[x] 0..1 boolean or Reference(MedicationStatement) "medication to be considered, minimum is the indication that there is some kind of medication"
@@ -361,6 +364,19 @@ Description: "**Position of the Body** during measurement"
 * ^compose.include[=].concept[+].code = #33586001
 * ^compose.include[=].concept[+].code = #40199007
 * ^compose.include[=].concept[+].code = #34106002
+
+
+
+ValueSet: MeasurementSettingVS
+Id: MeasurementSettingVS
+Title: "Measurement Setting value set"
+Description: "The environment in which the measurment was performed or observed."
+* ^url = //*tbd*/
+* ^version = "0.0.1"
+//* include codes from system http://snomed.info/sct
+* ^compose.include[=].comcept[+].code = #264362003 "Home environment"
+* ^compose.include[=].comcept[+].code = #257585005 "Clinic environment"
+* ^compose.include[=].comcept[+].code = #22232009 "Hospital environment"
 
 
 
