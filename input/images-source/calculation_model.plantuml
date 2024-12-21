@@ -1,0 +1,54 @@
+@startuml
+
+
+abstract class "Value" as value {
+    value
+    unit
+    timestamp
+}
+
+abstract class "Reference Range" as range {
+    low
+    high
+}
+
+value "1" *-right- "1" range
+
+package "measured" as measured {
+
+
+class "Systolic" as syst {
+}
+
+class "Diastolic" as diast {
+}
+}
+
+package "calculated" as calc {
+
+class "Pulse Pressure" as pulse {
+}
+}
+
+package "aggregated" as agg {
+
+class "Average" as avg {
+    period
+    count
+}
+
+}
+
+avg o-right- "0..*" measured
+
+syst -- pulse
+diast -- pulse
+
+value <|-- avg
+value <|-- syst
+value <|-- diast
+value <|-- pulse
+
+
+
+@enduml

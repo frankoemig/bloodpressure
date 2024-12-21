@@ -1,0 +1,40 @@
+@startuml
+
+class "**[[StructureDefinition-BloodPressure.html Blood Pressure]]**" as bp {
+}
+
+class "Body Weight" as bw
+Note left of bw
+necessary to interpret
+the measurement, but 
+in the sense of overweight
+end Note
+
+package "Medication" as pkg1 {
+
+    abstract class "Medication" as med
+
+    class "relevant" as relevant
+    class "irrelevant" as irrelevant
+
+    med <|-- relevant
+    med <|-- irrelevant
+}
+
+class "Exertion" as ex
+class "Positioning" as pos
+class "Cuff Size" as cuffsize
+Note right of cuffsize
+normally, the cuffsoize does not matter,
+but in rare circumstances
+it is relevant to know
+(eg. too small for an athletic person)
+end Note
+
+bp -left- bw
+bp -right- "0..*" relevant
+bp -- ex
+bp -- pos
+bp -- cuffsize
+
+@enduml

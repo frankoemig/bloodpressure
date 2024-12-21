@@ -1,5 +1,5 @@
 Alias: $loinc = http://loinc.org
-Alias: $v2code = http://bloodpressure.oemig.de/fhir/CodeSystem/v2code
+Alias: $v2datatype = http://bloodpressure.oemig.de/fhir/CodeSystem/v2DataType
 
 
 // This is an abstract base to allow for further profiling into groups of segments
@@ -83,7 +83,7 @@ Description: "v2 Profile: **Main Blood Pressure Measurement**"
 
 * seqNo = 1
 * valueDataType 1..1 MS
-* valueDataType = $v2code#NM
+* valueDataType = $v2datatype#NM
 * observationCode 1..1 MS
 * observationCode = $loinc#85354-9
 
@@ -99,7 +99,7 @@ Description: "v2 Profile: **Systolic** Blood Pressure"
 
 * seqNo = 2
 * valueDataType MS
-* valueDataType = $v2code#NM
+* valueDataType = $v2datatype#NM
 * observationCode MS
 * observationCode from http://bloodpressure.oemig.de/fhir/ValueSet/us-core-systolic-blood-pressure-code (required)
 //* observationCode = $loinc#8480-6
@@ -117,7 +117,7 @@ Description: "v2 Profile: **Diastolic** Blood Pressure"
 
 * seqNo = 3
 * valueDataType MS
-* valueDataType = http://bloodpressure.oemig.de/fhir/CodeSystem/ObservationCodes#NM
+* valueDataType = http://bloodpressure.oemig.de/fhir/CodeSystem/v2DataTypes#NM
 * observationCode MS
 * observationCode from http://bloodpressure.oemig.de/fhir/ValueSet/us-core-diastolic-blood-pressure-code (required)
 //* observationCode = $loinc#8482-2
@@ -174,7 +174,7 @@ Description: "v2 Profile: **Location of Blood Pressure Measurement**"
 * insert HeaderDetailRules
 
 * valueDataType MS
-* valueDataType = http://bloodpressure.oemig.de/fhir/CodeSystem/ObservationCodes#CWE
+* valueDataType = http://bloodpressure.oemig.de/fhir/CodeSystem/v2DataTypes#CWE
 * observationCode MS
 * observationCode = http://bloodpressure.oemig.de/fhir/CodeSystem/ObservationCodes#location
 * value MS

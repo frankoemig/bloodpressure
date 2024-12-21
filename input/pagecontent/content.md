@@ -5,15 +5,17 @@ table tr:nth-child(odd) {background: #FFF}
 </style>
 
 
-### Content Definition
-
 This page collects the details for the content itself:
 
-| Element | Definition |
+| Element | Explanation |
 | --- | --- |
-| systolic |
+| systolic | 
 | diastolic |
 | exertion |
+| pulse pressure |
+| mean arterial pressure |
+| spot measurement |
+| average value |
 | ... |
 
 ### Open Issues

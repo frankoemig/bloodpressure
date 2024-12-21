@@ -4,6 +4,7 @@ table tr:nth-child(even) {background: #EEE}
 table tr:nth-child(odd) {background: #FFF}
 </style>
 
+What is the process to get to product family specific artefacts?
 
 ### Step 1: MindMap
 

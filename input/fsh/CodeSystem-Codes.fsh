@@ -15,15 +15,11 @@ Description: "**Observation Codes** (for temporary use only; to be replaced late
 * ^versionNeeded = false
 * ^content = #complete
 
-* #exertion "extertion"
+* #exertion "exertion"
 * #location "location"
 * #position "position"
 * #consciousness "consciousness"
 * #meanArterial "mean arterial pressure"
-
-//for convenience (for the moment, to be replaced later)
-* #CWE "v2 DT CWE"
-* #NM "v2 DT NM"
 
 
 

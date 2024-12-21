@@ -11,7 +11,8 @@ Legend:
 end legend
 
 + **Blood** \n**Pressure**
---[#ff8] value
+
+--[#ff8] measured value
 ---[#fcc] systolic
 ----[#cff] DT: integer
 -----_ range: 0-400
@@ -24,6 +25,21 @@ end legend
 -----_ age: integer
 ----[#fcc] reference range
 -----_ range: 0-400
+---[#fcc] unit
+----[#cff] DT: code
+-----_ mmHg
+---[#fcc] reference range
+----_ age: integer
+----_ gender: code
+---[#fcc] interpretation
+----[#cff] DT: code
+-----_ critical low
+-----_ low
+-----_ normal
+-----_ high
+-----_ critical high
+
+--[#ff8] calculated value
 ---[#fcc] meanArterialPressure
 ----[#cff] DT: integer
 -----_ range: 60-100
@@ -43,27 +59,6 @@ end legend
 ----[#cff] DT: integer
 -----_ range: 0-1000
 ----[#fcc] reference range
----[#fcc] duration of measurement
-----[#cff] DT: code
------_ spot
------_ 1h
------_ 8h
------_ 10h
------_ 12h
------_ 24h
----[#fcc] unit
-----[#cff] DT: code
------_ mmHg
----[#fcc] reference range
-----_ age: integer
-----_ gender: code
----[#fcc] interpretation
-----[#cff] DT: code
------_ critical low
------_ low
------_ normal
------_ high
------_ critical high
 
 -- other relevant concepts
 --- <img icon_modifier_extension_complex.png> medication
@@ -75,7 +70,6 @@ end legend
 +++[#fcc] identifier
 +++[#fcc] dateTime
 ++++[#cff] DT: instant | period
-+++[#fcc] encounter
 
 +++[#88f] involved persons
 ++++[#88f] subject
@@ -83,16 +77,31 @@ end legend
 +++++_ gender
 ++++[#88f] author
 ++++[#88f] performer
-
+++++[#88f] recorder
 ++[#ff8] protocol
-+++[#ff8] location
++++[#ff8] duration of measurement
+++++[#cff] range
++++++[#cff] start: timestamp
++++++[#cff] end: timestamp
+++++[#cff] DT: code
++++++_ spot
++++++_ 1h
++++++_ 8h
++++++_ 10h
++++++_ 12h
++++++_ 24h
++++[#ff8] location at body
 ++++[#cff] DT: code
 +++++_ arm
 +++++_ wrist
 +++++_ ankle
 +++++_ finger
 +++++_ toe
-+++[#ff8] <img icon_modifier_extension_complex.png> position
++++[#ff8] location of person
+++++[#cff] DT: code
++++++_ physician office / hospital
++++++_ home
++++[#ff8] <img icon_modifier_extension_complex.png> positioning
 ++++[#cff] DT: code
 +++++_ sitting
 +++++_ standing
@@ -130,6 +139,7 @@ end legend
 +++++_ before
 +++++_ during
 +++++_ after
+++++[#ff8] anaesthetica
 
 ++[#ff8] comment
 +++[#cff] DT: text

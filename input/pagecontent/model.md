@@ -4,18 +4,53 @@ table tr:nth-child(even) {background: #EEE}
 table tr:nth-child(odd) {background: #FFF}
 </style>
 
+Blood pressure measurements appear to be obiously simple.
+However, discussions reveal that the details allow for interpretations.
+The only way out is an exact definition in form ob class diagrams.
 
-
-### Information Model
+### Base Model
 
 The aforementioned details are now aggregated in form of classes and linked together.
 The important items are in bold:
 
 <div width="500px">
-{% include bloodpressure_im.svg %}
+{% include base_model.svg %}
 </div>
 
 To simplify abstract classes are introduced.
+
+### Spot vs. Average 
+
+In principle, different individual measurements are performed.
+They can be used and aggregated into an average value:
+
+<div width="500px">
+{% include average_model.svg %}
+</div>
+
+
+### Calculation
+
+The pulse pressure is the result of a calculation of systolic and diastolic values:
+
+<div width="500px">
+{% include calculation_model.svg %}
+</div>
+
+### Interpretation
+
+The interpretation of values depends on certain context details:
+
+<div width="500px">
+{% include interpretation_model.svg %}
+</div>
+
+* some medication reduces the blood pressure to protect against strokes etc.
+* physical exertions like riding a bike increases the blood pressure
+* the positioning of the body has a direct impact on the result
+* ...
+
+### Equivalence of Models
 
 #### Pre- vs. Post-Coordination
 

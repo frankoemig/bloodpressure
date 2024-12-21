@@ -9,7 +9,8 @@ name: Blood-Pressure
 title: Blood Pressure Cross-Country Cross-Language Cross-Paradigm (Demo) IG
 description: Cross-Country, cross-paradigm Demo-Implementation Guide for Blood Pressure Measurements
 status: draft # draft | active | retired | unknown
-version: 0.1.2
+version: 0.2.0
+date: 2024-12-21
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2024+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -50,7 +51,7 @@ pages:
   content.md:
     title: Content Definition
   model.md:
-    title: Information Model
+    title: Information Models
   process.md:
     title: Process
   its.md:
@@ -98,8 +99,8 @@ pages:
 menu:
   Home: index.html
   Content: 
-    Defintions: content.html
-    Information Model: model.html
+    Definitions: content.html
+    Information Models: model.html
   Process: process.html
   ITS:
     v2 Profiling: v2.html

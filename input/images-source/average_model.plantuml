@@ -1,0 +1,23 @@
+@startuml
+
+
+
+class "Spot" as spot {
+    systolic
+    diastolic
+    unit
+    timestamp
+}
+
+
+class "Average" as avg {
+    systolic
+    diastolic
+    unit
+    period
+    count
+}
+
+avg o-right- "0..*" spot
+
+@enduml
