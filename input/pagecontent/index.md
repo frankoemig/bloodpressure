@@ -57,3 +57,12 @@ It can be expected, that this will be done later on.
 * further separation the specifications
 * clean vocabulary provision
 
+### Contributors
+
+in alphabetical order:
+
+* Nathan Davis
+* Rob Hausam
+* Stan Huff
+* Frank Oemig
+

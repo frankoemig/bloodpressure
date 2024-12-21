@@ -371,12 +371,13 @@ ValueSet: MeasurementSettingVS
 Id: MeasurementSettingVS
 Title: "Measurement Setting value set"
 Description: "The environment in which the measurment was performed or observed."
-* ^url = //*tbd*/
+* ^url =  "http://bloodpressure.oemig.de/fhir/ValueSet/MeasurementSetting"
 * ^version = "0.0.1"
-//* include codes from system http://snomed.info/sct
-* ^compose.include[=].comcept[+].code = #264362003 "Home environment"
-* ^compose.include[=].comcept[+].code = #257585005 "Clinic environment"
-* ^compose.include[=].comcept[+].code = #22232009 "Hospital environment"
+
+* ^compose.include[+].system = "http://snomed.info/sct"
+* ^compose.include[=].concept[+].code = #264362003 "Home environment"
+* ^compose.include[=].concept[+].code = #257585005 "Clinic environment"
+* ^compose.include[=].concept[+].code = #22232009 "Hospital environment"
 
 
 
