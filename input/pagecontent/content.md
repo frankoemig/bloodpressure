@@ -13,9 +13,12 @@ This page collects the details for the content itself:
 | diastolic |
 | exertion |
 | pulse pressure |
-| mean arterial pressure |
-| spot measurement |
-| average value |
+| mean arterial pressure | as a calculated information |
+| spot measurement | 
+| average value | calculated value, optionally with references to the individual measurements |
+| recorded date time |
+| date/time of observation |
+| comment |
 | ... |
 
 ### Open Issues

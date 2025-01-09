@@ -1,4 +1,4 @@
-CodeSystem: ObservationCategory
+CodeSystem: ObservationCategoryCS
 Id: ObservationCategory
 Title: "Observation Category"
 Description: "**Observation Category**"
@@ -37,7 +37,7 @@ Description: "**Observation Category**"
 
 
 
-ValueSet: ObservationCategory
+ValueSet: ObservationCategoryVS
 Id: ObservationCategory
 Title: "Observation Category"
 Description: "**Observation Category**"
@@ -51,7 +51,7 @@ Description: "**Observation Category**"
 
 
 
-ValueSet: ObservationVitalSignsCategory
+ValueSet: ObservationVitalSignsCategoryVS
 Id: ObservationVitalSignsCategory
 Title: "Observation Vital Signs Category"
 Description: "**Observation Vital Signs Category**"
@@ -73,7 +73,7 @@ Description: "**Observation Vital Signs Category**"
 
 
 
-ValueSet: ObservationVitalSignsBPCategory
+ValueSet: ObservationVitalSignsBPCategoryVS
 Id: ObservationVitalSignsBPCategory
 Title: "Observation Vital Signs Category"
 Description: "**Observation Vital Signs Blood Pressure Category**"

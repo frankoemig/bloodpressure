@@ -1,4 +1,4 @@
-CodeSystem: V2DataTypes
+CodeSystem: V2DataTypesCS
 Id: v2DataTypes
 Title: "v2 Data Types"
 Description: "**v2 Data Types** (for observations)"
@@ -23,7 +23,7 @@ Description: "**v2 Data Types** (for observations)"
 
 
 
-ValueSet: V2DataTypes
+ValueSet: V2DataTypesVS
 Id: v2DataTypes
 Title: "v2 Data Types"
 Description: "**v2 Data Types**"

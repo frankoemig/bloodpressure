@@ -1,4 +1,4 @@
-CodeSystem: ObservationCodes
+CodeSystem: ObservationCodesCS
 Id: ObservationCodes
 Title: "Observation Codes"
 Description: "**Observation Codes** (for temporary use only; to be replaced later on)"
@@ -24,7 +24,7 @@ Description: "**Observation Codes** (for temporary use only; to be replaced late
 
 
 
-ValueSet: ObservationCodes
+ValueSet: ObservationCodesVS
 Id: ObservationCodes
 Title: "Observation Codes"
 Description: "**Observation Codes**"

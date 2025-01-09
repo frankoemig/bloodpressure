@@ -60,16 +60,29 @@ end legend
 -----_ range: 0-1000
 ----[#fcc] reference range
 
--- other relevant concepts
---- <img icon_modifier_extension_complex.png> medication
+--[#cfc]  <img icon_modifier_extension_complex.png> other relevant concepts
+---[#cfc] <img icon_modifier_extension_complex.png> medication
 ----_ influences the results \nof the measurement
---- body weight
+---[#cfc] <img icon_modifier_extension_complex.png> exertion
+----[#cff] DT: code
+----[#cff] DT: PQ
+-----_ Watts
+---[#cfc] <img icon_modifier_extension_complex.png> body weight
 ----_ relevant for a correct interpretation
+---[#cfc] <img icon_modifier_extension_complex.png> pulse
+---[#cfc] <img icon_modifier_extension_complex.png> anaesthesia
+----[#cff] DT: code
+-----_ before
+-----_ during
+-----_ after
+----[#fcc] anaesthetica
 
 ++[#ff8] administrative
 +++[#fcc] identifier
-+++[#fcc] dateTime
-++++[#cff] DT: instant | period
++++[#fcc] observedDateTime
+++++[#cff] DT: instant | dateTime | period
++++[#fcc] recordedDateTime
+++++[#cff] DT: dateTime
 
 +++[#88f] involved persons
 ++++[#88f] subject
@@ -78,7 +91,22 @@ end legend
 ++++[#88f] author
 ++++[#88f] performer
 ++++[#88f] recorder
-++[#ff8] protocol
+
+++[#ff8] <img icon_modifier_extension_complex.png> context
++++[#ff8] <img icon_modifier_extension_complex.png> positioning
+++++[#cff] DT: code
++++++_ sitting
++++++_ standing
++++++_ reclining
++++++_ lying
+++++++_ lying on back
+++++++_ lying with tilt to left
++++[#ff8] <img icon_modifier_extension_complex.png> cuff size
+++++[#cff] DT: code/integer
++++[#ff8] <img icon_modifier_extension_complex.png> method
+++++[#cff] DT: code
+
+++[#ff8] <img icon_page_n_i.gif> protocol
 +++[#ff8] duration of measurement
 ++++[#cff] range
 +++++[#cff] start: timestamp
@@ -97,26 +125,12 @@ end legend
 +++++_ ankle
 +++++_ finger
 +++++_ toe
-+++[#ff8] location of person
++++[#ff8] measurement setting
 ++++[#cff] DT: code
-+++++_ physician office / hospital
-+++++_ home
-+++[#ff8] <img icon_modifier_extension_complex.png> positioning
-++++[#cff] DT: code
-+++++_ sitting
-+++++_ standing
-+++++_ reclining
-+++++_ lying
-++++++_ lying on back
-++++++_ lying with tilt to left
++++++_ physician office / clinic / hospital
++++++_ dwelling / home
 +++[#ff8] tilt (degree)
 ++++[#cff] DT: integer
-+++[#ff8] <img icon_modifier_extension_complex.png> method
-++++[#cff] DT: code
-+++[#ff8] <img icon_modifier_extension_complex.png> exertion
-++++[#cff] DT: code
-++++[#cff] DT: PQ
-+++++_ Watts
 +++[#ff8] aspiration
 ++++_ expiration
 ++++_ inspiration
@@ -127,19 +141,11 @@ end legend
 +++++_ bear/tiger/snake
 +++[#ff8] <img icon_page_n_i.gif> cuff type
 ++++[#cff] DT: code
-+++[#ff8] <img icon_modifier_extension_complex.png> cuff size
-++++[#cff] DT: code/integer
 +++[#ff8] consciousness
 ++++[#cff] DT: code
 +++++_ awake
 +++++_ unconscious
 +++++_ sleeping
-+++[#ff8] <img icon_modifier_extension_complex.png> anaesthesia
-++++[#cff] DT: code
-+++++_ before
-+++++_ during
-+++++_ after
-++++[#ff8] anaesthetica
 
 ++[#ff8] comment
 +++[#cff] DT: text

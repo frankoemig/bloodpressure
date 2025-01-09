@@ -40,9 +40,14 @@ It can be expected, that this will be done later on.
 #### Some Notes on the mindmap
 
 * value on the left: assembles all details dealing with the measured value itself
-* protocol: context information
+* context: relevant details to correctly interpret the data
+* protocol: 'meta-data' about the measurements
 * sleep status: this has been replaced by consciousness to also allow for "unconscious" as a separate value.
 * event: Some people increase their blood pressure by just seeing a physician, or for other reasons. Not sure whether this is relevant information, but it should not be left out.
+
+### Topics for Discussion
+
+**Exertion**: That could be managed as a separate observation. The same applies to other relevant details.
 
 ### Open Issues
 

@@ -104,7 +104,11 @@ Description: "This is the Logical Model for **Blood Pressure**"
 * consciousness 0..1 CodeableConcept "Consciousness of the patient"
 * consciousness from http://bloodpressure.oemig.de/fhir/ValueSet/Consciousness (required)
 
-* exertion[x] 0..1 integer or CodeableConcept "physical activity (measured in Watts or as coded information)" 
+* exertion[x] 0..1 integer or CodeableConcept or Reference(Observation) "physical activity (measured in Watts or as coded information)" 
+//TODO: identify how to set short explanations for specific constraints
+//* exertionInteger ^short = "measured value in a specific unit, eg. Watts"
+//* exertionCodeableConcept ^short = "measured value in coded form"
+//* exertionReference ^short = "measured value as a reference to an observation"
 
 * anaesthesia 0..1 CodeableConcept "Anaesthesia of patient during measurement"
 * anaesthesia from http://bloodpressure.oemig.de/fhir/ValueSet/Anaesthesia (required)
@@ -112,7 +116,7 @@ Description: "This is the Logical Model for **Blood Pressure**"
 * measurementSetting 0..1 CodeableConcept "The setting in which the measurement was performed; i.e. at home, at clinic, at emergency room, etc."
 * measurementSetting from MeasurementSettingVS (extensible)
 
-//* bodyWeight 0..1 BodyWeight "body weight"
+* bodyWeight[x] 0..1 CodeableConcept or Reference(Observation) "body weight"
 
 * medication[x] 0..1 boolean or Reference(MedicationStatement) "medication to be considered, minimum is the indication that there is some kind of medication"
  
@@ -140,7 +144,7 @@ Severity:    #error
 
 
 
-CodeSystem: CuffType
+CodeSystem: CuffTypeCS
 Id: CuffType
 Title: "Cuff Type"
 Description: "**Cuff Type**"
@@ -162,7 +166,7 @@ Description: "**Cuff Type**"
 * #Dring "D-ring cuffs are designed to be self-applied and make it easier for the patient to take their own blood pressure without assistance."
 * #specialty "specialty-use blood pressure cuffs"
 
-ValueSet: CuffType
+ValueSet: CuffTypeVS
 Id: CuffType
 Title: "Cuff Type"
 Description: "**Cuff Type**"
@@ -177,7 +181,7 @@ Description: "**Cuff Type**"
 
 
 
-CodeSystem: CuffSize
+CodeSystem: CuffSizeCS
 Id: CuffSize
 Title: "Cuff Size"
 Description: "**Cuff Size**"
@@ -204,7 +208,7 @@ Description: "**Cuff Size**"
 * #Neonatal "A cuff used for a neonate, assuming cuff is the appropriate size for maturity and birthweight of the neonate."
 
 
-ValueSet: CuffSize
+ValueSet: CuffSizeVS
 Id: CuffSize
 Title: "Cuff Size"
 Description: "**Cuff Size**"
@@ -221,7 +225,7 @@ Description: "**Cuff Size**"
 
 
 
-CodeSystem: Consciousness
+CodeSystem: ConsciousnessCS
 Id: Consciousness
 Title: "Consciousness"
 Description: "**Consciousness**"
@@ -243,7 +247,7 @@ Description: "**Consciousness**"
 * #sleeping "The patient is sleeping."
 
 
-ValueSet: Consciousness
+ValueSet: ConsciousnessVS
 Id: Consciousness
 Title: "Consciousness"
 Description: "**Consciousness**"
@@ -258,7 +262,7 @@ Description: "**Consciousness**"
 
 
 
-CodeSystem: Anaesthesia
+CodeSystem: AnaesthesiaCS
 Id: Anaesthesia
 Title: "Anaesthesia"
 Description: "**Anaesthesia**"
@@ -280,7 +284,7 @@ Description: "**Anaesthesia**"
 * #after "Measured shortly after anaesthesia."
 
 
-ValueSet: Anaesthesia
+ValueSet: AnaesthesiaVS
 Id: Anaesthesia
 Title: "Anaesthesia"
 Description: "**Anaesthesia**"
@@ -297,7 +301,7 @@ Description: "**Anaesthesia**"
 
 
 
-CodeSystem: Position
+CodeSystem: PositionCS
 Id: Position
 Title: "Position"
 Description: "**Position**"
@@ -323,7 +327,7 @@ Description: "**Position**"
 
 
 
-ValueSet: Position
+ValueSet: PositionVS
 Id: Position
 Title: "Position"
 Description: "**Position**"
@@ -336,7 +340,7 @@ Description: "**Position**"
 * include codes from system http://bloodpressure.oemig.de/fhir/CodeSystem/Position
 
 
-ValueSet: BodyPosition
+ValueSet: BodyPositionVS
 Id: BodyPosition
 Title: "Body Position"
 Description: "**Position of the Body** during measurement"
@@ -381,7 +385,7 @@ Description: "The environment in which the measurment was performed or observed.
 
 
 
-CodeSystem: Location
+CodeSystem: LocationCS
 Id: Location
 Title: "Location"
 Description: "**Location**"
@@ -416,7 +420,7 @@ Description: "**Location**"
 * #IntraArterial "Invasive measurement via transducer access line within an artery."
 
 
-ValueSet: Location
+ValueSet: LocationVS
 Id: Location
 Title: "Location"
 Description: "**Location**"
@@ -433,7 +437,7 @@ Description: "**Location**"
 
 
 
-CodeSystem: Exertion
+CodeSystem: ExertionCS
 Id: Exertion
 Title: "Exertion"
 Description: "**Exertion**"
@@ -464,7 +468,7 @@ Description: "**Exertion**"
 * #300 "300W"
 
 
-ValueSet: Exertion
+ValueSet: ExertionVS
 Id: Exertion
 Title: "Exertion"
 Description: "**Exertion**"
@@ -480,7 +484,7 @@ Description: "**Exertion**"
 
 
 
-ValueSet: BPunits
+ValueSet: BPunitsVS
 Id: BPunits
 Title: "Blood Pressure Units"
 Description: "**Units for measuring Blood Pressure**"
