@@ -93,7 +93,7 @@ end legend
 ++++[#88f] recorder
 
 ++[#ff8] <img icon_modifier_extension_complex.png> context
-+++[#ff8] <img icon_modifier_extension_complex.png> positioning
++++[#ff8] <img icon_modifier_extension_complex.png> positioning of body
 ++++[#cff] DT: code
 +++++_ sitting
 +++++_ standing
@@ -101,6 +101,10 @@ end legend
 +++++_ lying
 ++++++_ lying on back
 ++++++_ lying with tilt to left
++++[#ff8] <img icon_modifier_extension_complex.png> positioning of arm
+++++[#cff] DT: code
++++++_ down
++++++_ up
 +++[#ff8] <img icon_modifier_extension_complex.png> cuff size
 ++++[#cff] DT: code/integer
 +++[#ff8] <img icon_modifier_extension_complex.png> method
@@ -120,11 +124,19 @@ end legend
 +++++_ 24h
 +++[#ff8] location at body
 ++++[#cff] DT: code
-+++++_ arm
-+++++_ wrist
-+++++_ ankle
-+++++_ finger
-+++++_ toe
++++++[#f88] extern
+++++++_ arm
++++++++_ right
++++++++_ left
+++++++_ wrist
+++++++_ ankle
+++++++_ finger
+++++++_ toe
++++++[#f88] intern
+++++++_ left heart
+++++++_ right heart
+++++++_ radialis artery
+++++++_ coronary artery
 +++[#ff8] measurement setting
 ++++[#cff] DT: code
 +++++_ physician office / clinic / hospital

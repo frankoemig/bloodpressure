@@ -69,5 +69,6 @@ in alphabetical order:
 * Nathan Davis
 * Rob Hausam
 * Stan Huff
+* Alina Oemig
 * Frank Oemig
 

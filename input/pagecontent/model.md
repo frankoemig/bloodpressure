@@ -19,6 +19,14 @@ The important items are in bold:
 
 To simplify abstract classes are introduced.
 
+### "Magic Code"
+
+An important aspect for discussion is the way a blood pressure measurement can be identified.
+
+<div width="500px">
+{% include magic_code.svg %}
+</div>
+
 ### Spot vs. Average 
 
 In principle, different individual measurements are performed.

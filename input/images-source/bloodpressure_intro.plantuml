@@ -1,0 +1,60 @@
+@startuml
+
+title Blood Pressure Overview
+
+class "Blood Pressure" as bp #cfc
+ 
+class "Value" as val1
+class "Unit" as unit1
+class "syst. Value" as syst
+
+class "Value" as val2
+class "Unit" as unit2
+class "diast. Value" as diast
+
+class "Time Stamp" as ts
+class "Duration" as dur
+
+class "Interpreation" as inter
+class "Medication" as med #ffc
+class "Pulse" as pulse #ffc
+class "Body Weight" as bw #ffc
+class "Exertion" as exer #ffc
+
+class "Position" as pos
+class "Stress" as stress
+class "Measurement Type" as meas
+class "Cuff Size" as cs
+class "Cuff Type" as ct
+class "Method" as meth
+class "Device" as dev
+
+syst -up-> val1
+syst -up-> unit1
+bp -up-> syst
+diast -up-> val2
+diast -up-> unit2
+bp -up-> diast
+bp -up-> ts
+bp -up-> dur
+
+bp -left-> inter
+
+bp --> med
+bp --> pulse
+bp --> bw
+bp --> exer
+
+med .[hidden]right. pulse
+pulse .[hidden]right. bw
+bw .[hidden]right. exer
+
+bp --> pos
+bp --> stress
+bp --> meas
+bp --> cs
+bp --> ct
+bp --> meth
+bp --> dev
+
+@enduml

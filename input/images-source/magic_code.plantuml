@@ -1,0 +1,65 @@
+@startuml
+
+
+object "Blood Pressure" as bp {
+    The (new) base Magic Code should identify an observation
+    as a blood pressure measurement in general.
+}
+
+object "internal Measurement" as intern {
+    A measurement that is done inside the body,
+    in the left or right heart.
+}
+
+object "left heart" as left {
+}
+
+object "right heart" as right {
+}
+
+object "radialis artery" as ra
+object "central venous \npressure" as vene
+object "pulmonary artery \npressure" as pulmo
+object "intracardiac \npressure" as icp
+
+object "artery \npressure" as artery
+
+object "coronary \nartery" as ca {
+    for stents
+}
+
+object "external Measurement" as extern {
+    "**Classic**" measurement that is normally expected as 
+    a blood pressure measurement.
+    This is normally done at an arm or wrinkle.
+    Currently, the "magic code" designates 
+    these types of measurements.
+}
+
+object "Arm" as arm
+object "Wrinkle" as wrinkle
+object "Leg" as leg
+object "Finger" as finger
+object "Toe" as toe
+
+bp <|-- intern
+bp <|-- extern
+
+intern <|-- left
+intern <|-- right
+intern <|-- ca
+intern <|-- ra
+
+right <|-- vene
+right <|-- pulmo
+right <|-- icp
+
+left <|-- artery
+
+extern <|-- arm
+extern <|-- wrinkle
+extern <|-- leg
+extern <|-- finger
+extern <|-- toe
+
+@enduml

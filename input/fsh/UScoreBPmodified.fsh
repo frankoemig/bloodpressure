@@ -219,16 +219,21 @@ Extension: SystolicExt
 Id:        systolicExt
 Title:     "Systolic"
 Description: "Systolic"
+Context: StructureDefinition
+
 // Limit the context to Observations
 * ^context[+].type = #element
 * ^context[=].expression = "StructureDefinition"
 * value[x] only CodeableConcept
 * value[x] from http://bloodpressure.oemig.de/fhir/ValueSet/ObservationCategory (required)
 
+
 Extension: DiastolicExt
 Id:        diastolicExt
 Title:     "Diastolic"
 Description: "Disastolic"
+Context: StructureDefinition
+
 // Limit the context to Observations
 * ^context[+].type = #element
 * ^context[=].expression = "StructureDefinition"
@@ -242,6 +247,8 @@ Extension: ExertionExt
 Id:        exertionExt
 Title:     "Exertion"
 Description: "Exertion"
+Context: StructureDefinition
+
 // Limit the context to Observations
 * ^context[+].type = #element
 * ^context[=].expression = "StructureDefinition"
@@ -253,6 +260,8 @@ Extension: ConsciousnessExt
 Id:        ConsciousnessExt
 Title:     "Consciousness"
 Description: "Consciousness"
+Context: StructureDefinition
+
 // Limit the context to Observations
 * ^context[+].type = #element
 * ^context[=].expression = "StructureDefinition"
@@ -265,6 +274,7 @@ Extension: MedicationExt
 Id:        medicationExt
 Title:     "Medication to be considered"
 Description: "Medication to be considered for correct interpretation"
+Context: StructureDefinition
 
 * ^context[+].type = #element
 * ^context[=].expression = "StructureDefinition"
@@ -275,6 +285,7 @@ Extension: BodyWeightExt
 Id:        bodweightExt
 Title:     "Body Weight to be considered"
 Description: "Body Weight to be considered for correct interpretation (has to be replaced by proper BW observation profile)"
+Context: StructureDefinition
 
 * ^context[+].type = #element
 * ^context[=].expression = "StructureDefinition"
