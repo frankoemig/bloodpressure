@@ -18,6 +18,6 @@ class "Average" as avg {
     count
 }
 
-avg o-right- "0..*" spot
+avg "0..*" o-down- "0..*" spot : used
 
 @enduml

@@ -5,7 +5,9 @@ table tr:nth-child(odd) {background: #FFF}
 </style>
 
 
-This page collects the details for the content itself:
+This page should collect the details for the content itself. 
+However, as this guide is at the moment not mature enough, and the necessary resources are not yet provided
+this page is in a very draft state:
 
 | Element | Explanation |
 | --- | --- |

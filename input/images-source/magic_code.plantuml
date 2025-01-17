@@ -6,15 +6,17 @@ object "Blood Pressure" as bp {
     as a blood pressure measurement in general.
 }
 
-object "internal Measurement" as intern {
+cloud "special observations" {
+
+object "invasive Measurement" as intern {
     A measurement that is done inside the body,
     in the left or right heart.
 }
 
-object "left heart" as left {
+object "left circulation" as left {
 }
 
-object "right heart" as right {
+object "right circulation" as right {
 }
 
 object "radialis artery" as ra
@@ -27,20 +29,24 @@ object "artery \npressure" as artery
 object "coronary \nartery" as ca {
     for stents
 }
+}
 
-object "external Measurement" as extern {
+cloud "routine" {
+
+object "non-invasive Measurement" as extern {
     "**Classic**" measurement that is normally expected as 
-    a blood pressure measurement.
-    This is normally done at an arm or wrinkle.
+    a blood pressure measurement, or "routine".
+    This is normally done at an arm or wrist.
     Currently, the "magic code" designates 
     these types of measurements.
 }
 
 object "Arm" as arm
-object "Wrinkle" as wrinkle
+object "Wrist" as wrinkle
 object "Leg" as leg
 object "Finger" as finger
 object "Toe" as toe
+}
 
 bp <|-- intern
 bp <|-- extern

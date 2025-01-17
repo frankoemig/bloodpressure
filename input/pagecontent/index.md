@@ -6,15 +6,19 @@ table tr:nth-child(odd) {background: #FFF}
 
 This is the homepage for blood pressure.
 The primary purpose is to collect the details for properly specifying data representations in different formats,
-i.e. product families (and perhaps also foreign standards).
+i.e. product families like FHIR, CDA and v2x/v2+ (and perhaps also foreign standards).
 
-> This set of pages still requires a  realignment with the sibbling specifications body weight, body height and
-> vital signs in general. Therefore, some details may be listed that are not necessary and belong to the other models.
+> This set of pages still requires a realignment with sibbling specifications like body weight, body height and
+> other. Therefore, some details may be listed that are not necessary and belong to the other models.
 > This is especially true for the codesystems.
 > For simplicity, some artefacts are copied into this specification instead of referencing them.
 > So, please take that as work-in-progress.
+>
+> Vital Signs in contrast should derive a subset out of the details specified within this guide.
 
-Following is the overall high-level information model that exemplifies the correlation with other artefacts:
+Following is the overall high-level information model that places bllod pressure in the middle (in light green).
+Describing details are referenced in blue. 
+Artefacts in brown represent other concepts this one has relations with:
 
 ![Blood Pressure](bloodpressure-model.png){:height="400px"}
 <br clear="all"/>  
@@ -48,6 +52,11 @@ It can be expected, that this will be done later on.
 ### Topics for Discussion
 
 **Exertion**: That could be managed as a separate observation. The same applies to other relevant details.
+
+### Important next Steps
+
+The mindmap above has to be completed, enhanced, and conceptualized into [information models](model.html).
+In addition, all elements must be [described](content.html).
 
 ### Open Issues
 
