@@ -9,8 +9,8 @@ name: Blood-Pressure
 title: Blood Pressure Cross-Country Cross-Language Cross-Paradigm (Demo) IG
 description: Cross-Country, cross-paradigm Demo-Implementation Guide for Blood Pressure Measurements
 status: draft # draft | active | retired | unknown
-version: 0.2.4
-date: 2025-01-17
+version: 0.2.5
+date: 2025-01-24
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -52,6 +52,8 @@ pages:
     title: Content Definition
   model.md:
     title: Information Models
+  hierarchy.md:
+    title: Hierarchy of Profiles
   process.md:
     title: Process
   its.md:
@@ -100,8 +102,9 @@ menu:
   Home: index.html
   Content: 
     Information Models: model.html
+    Hierarchy of Profiles: hierarchy.html
     Definitions: content.html
-  Related Concepts:
+  Related Concepts (in other guides):
     Body Weight: https://build.fhir.org/ig/frankoemig/bodyweight/
     Body Height: https://build.fhir.org/ig/frankoemig/bodyheight/
     Vital Signs (in general): https://build.fhir.org/ig/frankoemig/vital-signs-demo/

@@ -83,31 +83,9 @@ the technology binding (ITS):
 * openEHR
 * xDT (for Germany)
 
-### Pre- and Post-Coordination Mapping
 
-An important aspect is the transformation between pre- and postcoordinated forms.
-A single precoordinated concept can express and convey the same semantics 
-as postcoordinated terms, or using the logical models from above, the combination
-of certain attributes.
-
-Therefore, the attributes have to be values whether they are relevant for a correct
-interpretation or not. The following table provides an (draft) overview:
-
-| relevant | not relevant | questionable |
-| --- | --- | --- |
-| exertion | cuff size | method |
-| position | cuff type |
-| tilt | location |
-
-Consequently, a transformation in between becomes necessary.
-It is expressed as a formula to indicate the idea:
-
-f (concept1, position1, tilt1, exertion1) = f (concept2, position2, tilt2, exertion2)
-
-Maybe more parameters are necessary. If the relevance shown above is not correct
-then modifications are necessary to this formula are necessary as well.
 
 ### Country-specific Derivations
 
-.. are not necessary so far.
+.. should not be necessary.
 

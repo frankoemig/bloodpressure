@@ -9,7 +9,7 @@ class "Observation" as obs {
     observationDate: instant|period
 }
 
-class "Vital Sign" as vs {
+class "**Vital Sign**" as vs {
     category: code = vital-sign
 }
 
@@ -40,6 +40,12 @@ class "Blood Pressure Spot" as bps {
     date: instant
 }
 
+class "BP Spot Non-Invasive" as bpsni 
+class "BP Spot Invasive" as bpsi
+
+bps <|-- bpsni
+bps <|-- bpsi
+
 class "Blood Pressure Panel" as bpp {
 
 }
@@ -59,6 +65,7 @@ vs <|-- bpp
 vs <|-- bw
 
 class "US Core Avg BP" as usbp2 
+usbp2 "0..*" o-right- "0..*" usbp1
 
 obs -right- pat : subject >
 obs -left- aut : author >
@@ -66,11 +73,12 @@ obs -left- aut : author >
 bp <|-- bps
 bp <|-- bpa
 
-bpa <|-- usbp2
+bpa <|--- usbp2
+usbp1 .[hidden]right. debp
 
-bps <|-- usbp1
-bps <|-- debp
-bps <|-- bpp
+bpsni <|-- usbp1
+bpsni <|-- debp
+bpsni <|-- bpp
 
 bp "0..*" ..right. "0..1" bw
 bp .left.. "0..*" medic

@@ -63,13 +63,17 @@ end legend
 --[#cfc]  <img icon_modifier_extension_complex.png> other relevant concepts
 ---[#cfc] <img icon_modifier_extension_complex.png> medication
 ----_ influences the results \nof the measurement
----[#cfc] <img icon_modifier_extension_complex.png> exertion
+----[#cff] boolean
+----[#fcc] MedicationAdministration
+---[#cfc] <img icon_modifier_extension_complex.png> current/former exertion
 ----[#cff] DT: code
 ----[#cff] DT: PQ
 -----_ Watts
 ---[#cfc] <img icon_modifier_extension_complex.png> body weight
 ----_ relevant for a correct interpretation
 ---[#cfc] <img icon_modifier_extension_complex.png> pulse
+----[#cff] PQ
+----[#cff] Reference
 ---[#cfc] <img icon_modifier_extension_complex.png> anaesthesia
 ----[#cff] DT: code
 -----_ before
