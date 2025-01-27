@@ -73,6 +73,9 @@ As stated already, they are all at least incomplete.
     * component[diastolic].valueQuantity.system = $UCUM
     * component[diastolic].valueQuantity.code = "mm[Hg]"
     * component[diastolic].dataAbsentReason
+* CIMI:
+  * https://build.fhir.org/ig/HL7/cardx-ig/
+  * https://build.fhir.org/ig/HL7/cardx-ig/StructureDefinition-blood-pressure-panel.html
 * DE ISiK
 * DE MI-I
   * ICU 1.0.0: https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.icu/1.0.0/files/769040

@@ -23,6 +23,24 @@ Artefacts in brown represent other concepts this one has relations with:
 ![Blood Pressure](bloodpressure-model.png){:height="400px"}
 <br clear="all"/>  
 
+### Requirements / Targets
+
+* collecting all relevant details for blood pressure = single content specification
+* base for other guides / derived profiles
+* independently specified from specific ITS 
+* translatable into different ITS
+* complete
+* providing an organized hierarchy
+
+Involved groups:
+
+* Orders & Observations
+* CIMI
+* C-CDA/CDAMG
+* V2MG
+
+Another target is to invite for contributions and participation.
+The primary author is happy to get comments and further input.
 
 ### MindMap as a starting point
 
@@ -79,5 +97,5 @@ in alphabetical order:
 * Rob Hausam
 * Stan Huff
 * Alina Oemig
-* Frank Oemig
+* Frank Oemig (IG author)
 
