@@ -1,0 +1,25 @@
+@startuml
+
+card "Implementation Guide" as ig {
+
+card "Information \nCollection \n(Text, Mindmap)" as o1
+card "Information \nModelling \n(UML, Text)" as o2
+card "Technical \nRepresentation \n(Logical Model, \nValue Sets)" as o3
+card "ITS \n(FHIR, \nCDA, v2)" as o4
+
+o1 -right-> o2 : translate
+o2 -right-> o3 : translate
+o3 -right-> o4 : translate
+
+o2 .left.> o1 : revise
+o3 .left.> o2 : revise
+
+}
+
+card "Validation \n(Connect-a-thon, \nBallot)" as o5
+
+o4 -right-> o5 : implement
+o5 .left.> o4 : revise
+
+
+@enduml

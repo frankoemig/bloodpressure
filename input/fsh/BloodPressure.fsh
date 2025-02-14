@@ -372,11 +372,13 @@ Description: "**Position of the Body** during measurement"
 
 
 ValueSet: MeasurementSettingVS
-Id: MeasurementSettingVS
+Id: MeasurementSetting
 Title: "Measurement Setting value set"
 Description: "The environment in which the measurment was performed or observed."
 * ^url =  "http://bloodpressure.oemig.de/fhir/ValueSet/MeasurementSetting"
 * ^version = "0.0.1"
+
+* insert HeaderDetailRules
 
 * ^compose.include[+].system = "http://snomed.info/sct"
 * ^compose.include[=].concept[+].code = #264362003 "Home environment"

@@ -6,6 +6,3 @@ RuleSet: HeaderDetailRules
 * ^experimental = false
 * ^date = "2024-04-16"
 * ^copyright = "FO"
-
-//wird durch config überschrieben
-//* ^publisher = "IHE Deutschland e.V."

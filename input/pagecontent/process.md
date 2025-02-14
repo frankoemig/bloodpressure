@@ -6,6 +6,19 @@ table tr:nth-child(odd) {background: #FFF}
 
 What is the process to get to product family specific artefacts?
 
+<div>
+{% include process.svg width='600px' %}
+</div>
+
+1. The process starts with a collection of details which are documented and organized into groups by mindmaps.
+2. The next step improves everything further and is then translated into information models to semantically clarify the content.
+3. In a third step the details are technically structured that prepares the translation into an ITS.
+4. The fourth step translates the organized and semantically clarified details into an implementable technology specification. In our case this is FHIR, V3/CDA and v2.
+5. Finally, implementations are validated to ensure that everything is correct and implementable.
+
+The process is not organized into a pure sequential process according to the waterfall model,
+but allows for stepping back to adjust and improve the results from previous steps.
+
 ### Step 1: MindMap
 
 The following mindmap collects and sorts all aspects around blood pressure that are necessary for 
@@ -83,9 +96,25 @@ the technology binding (ITS):
 * openEHR
 * xDT (for Germany)
 
-
-
 ### Country-specific Derivations
 
 .. should not be necessary.
+
+### Modularization
+
+Another aspect to cover/consider/realize is modularization. What does that mean?
+In which to organize the content.
+Modules can be:
+
+* hierarchic (= aka sub-modules)
+* per ITS, i.e. depending on or separated by product family
+* content, i.e. other clinical objects/models
+
+### Tooling
+
+What tools to use?
+
+* PLantUML
+* Enterprise Architect
+* other?
 

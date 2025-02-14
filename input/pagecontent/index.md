@@ -96,6 +96,7 @@ in alphabetical order:
 * Nathan Davis
 * Rob Hausam
 * Stan Huff
+* Claude Nanjo
 * Alina Oemig
 * Frank Oemig (IG author)
 
