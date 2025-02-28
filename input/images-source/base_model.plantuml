@@ -44,6 +44,12 @@ end Note
 class "Medication" as med
 class "Author" as a
 class "Performer" as p
+Note right of p
+normally a physician,
+but could also
+be the patient
+end Note
+
 class "Recorder" as r
 class "Subject" as s
 Note left of s

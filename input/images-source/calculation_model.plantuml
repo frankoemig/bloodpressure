@@ -27,27 +27,28 @@ class "Diastolic" as diast {
 package "calculated" as calc {
 
 class "Pulse Pressure" as pulse {
-}
+    formula
 }
 
-package "aggregated" as agg {
-
-class "Average" as avg {
-    period
-    count
+class "Mean Arterial Pressure" as mean {
+    formula
 }
+
 
 }
 
-avg o-right- "0..*" measured
 
-syst -- pulse
-diast -- pulse
+syst "0..1" -- pulse
+diast "0..1" -- pulse
 
-value <|-- avg
+syst "0..1" -- mean
+diast "0..1" -- mean
+
+
 value <|-- syst
 value <|-- diast
 value <|-- pulse
+value <|-- mean
 
 
 

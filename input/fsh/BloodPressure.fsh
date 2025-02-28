@@ -11,6 +11,11 @@ Description: "This is the Logical Model for **Blood Pressure**"
 
 * insert HeaderDetailRules
 
+
+* ^extension[0].url = "http://hl7.org/fhir/tools/StructureDefinition/logical-target"
+* ^extension[=].valueBoolean = true
+
+
 * systolicPressure 0..1 SU BackboneElement "systolic blood pressure" "Peak systemic arterial blood pressure - measured in systolic or contraction phase of the heart cycle."
   * code 0..1 CodeableConcept "code, in case of a precoordinated concept"
   * code from http://bloodpressure.oemig.de/fhir/ValueSet/us-core-systolic-blood-pressure-code (extensible)
@@ -118,7 +123,7 @@ Description: "This is the Logical Model for **Blood Pressure**"
 
 * bodyWeight[x] 0..1 CodeableConcept or Reference(Observation) "body weight"
 
-* medication[x] 0..1 boolean or Reference(MedicationStatement) "medication to be considered, minimum is the indication that there is some kind of medication"
+* medication[x] 0..* boolean or Reference(MedicationStatement) "medication to be considered, minimum is the indication that there is some kind of medication"
  
 * method 0..1 CodeableConcept "measurement method"
 * tilt 0..1 integer "tilt (in degrees)"

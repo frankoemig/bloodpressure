@@ -66,13 +66,15 @@ the used measurements:
 
 ### Calculation
 
-Another dimension is when measurements are calculated from otherse:
+Another dimension is when measurements are calculated from others:
 The pulse pressure is the result of a calculation of systolic and diastolic values.
 An average value is the calculation of a set of spot measurements:
 
 <div width="500px">
 {% include calculation_model.svg %}
 </div>
+
+The formula for calculation can be part of the data.
 
 ### Dimensions
 
