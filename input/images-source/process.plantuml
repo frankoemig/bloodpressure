@@ -13,6 +13,7 @@ o3 -right-> o4 : translate
 
 o2 .left.> o1 : revise
 o3 .left.> o2 : revise
+o4 .left.> o3 : revise
 
 }
 
