@@ -67,6 +67,21 @@ end legend
 ----[#fcc] MedicationAdministration
 ---[#cfc] <img icon_modifier_extension_complex.png> current/former exertion
 ----[#cff] DT: code
+-----_ sleeping
+-----_ sitting
+-----_ walking
+------_ slow
+------_ normal
+------_ fast
+-----_ jogging
+------_ slow
+------_ normal
+------_ fast
+-----_ running
+------_ slow
+------_ normal
+------_ fast
+-----_ biking
 ----[#cff] DT: PQ
 -----_ Watts
 ---[#cfc] <img icon_modifier_extension_complex.png> body weight
