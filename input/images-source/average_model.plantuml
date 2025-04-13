@@ -1,7 +1,6 @@
 @startuml
 
 
-
 class "Spot" as spot {
     systolic
     diastolic
@@ -10,14 +9,15 @@ class "Spot" as spot {
 }
 
 
-class "Average" as avg {
+class "Calculated" as calc {
     systolic
     diastolic
     unit
     period
     count
+    function
 }
 
-avg "0..*" o-right- "0..*" spot : "    used    "
+calc "0..*" o-right- "0..*" spot : "      used        "
 
 @enduml

@@ -12,7 +12,7 @@ abstract class "Reference Range" as range {
     high
 }
 
-value "1" *-right- "1" range
+value "1" *-right- "1" range :  "             "
 
 package "measured" as measured {
 
@@ -30,6 +30,10 @@ class "Pulse Pressure" as pulse {
     formula
 }
 
+}
+
+package "finding: integrated result" as integr {
+
 class "Mean Arterial Pressure" as mean {
     formula
 }
@@ -41,8 +45,8 @@ class "Mean Arterial Pressure" as mean {
 syst "0..1" -- pulse
 diast "0..1" -- pulse
 
-syst "0..1" -- mean
-diast "0..1" -- mean
+syst "0..*" -- mean
+diast "0..*" -- mean
 
 
 value <|-- syst

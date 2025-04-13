@@ -50,12 +50,12 @@ In most use cases, probably 99%, only non-invasive measurements obtained during 
 is considered or of interest resp. in scope. Nevertheless, when talking about blood pressure the
 remaining 1% must be considered as well.
 
-### Spot vs. Average 
+### Spot vs. calculated Measurements 
 
 A total different dimension within the hierarchy shown above is a spot measurements - in contrast
-to an average calculated over time.
+to calculated values (like min, max, or average) over time.
 Then in principle different individual measurements are performed.
-They can be used and calculated into an average value optionally including
+They can be used and calculated into a single value optionally including
 the used measurements:
 
 <div width="500px">
@@ -63,6 +63,15 @@ the used measurements:
 </div>
 
 **Question**: Is it safe to assume, that for vital signs only spot measurements should be considered?
+Or alternatively, only average measurements over a very short period of time, i.e. a few minutes?
+
+Possible functions:
+
+* min
+* average
+* max 
+
+**Quwstions**: More functions? Are there different ways to calculate an average?
 
 ### Calculation
 
@@ -75,6 +84,8 @@ An average value is the calculation of a set of spot measurements:
 </div>
 
 The formula for calculation can be part of the data.
+
+The integrated value takes a set of individual measurements and calculates aka integration across all values.
 
 ### Dimensions
 
