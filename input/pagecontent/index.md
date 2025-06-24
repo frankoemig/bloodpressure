@@ -42,6 +42,17 @@ Involved groups:
 Another target is to invite for contributions and participation.
 The primary author is happy to get comments and further input.
 
+### How to proceed in this project?
+
+In this project, the starting point is a collection of artefacts that are necessary to consider
+in a technical representation. Therefore, a profile in FHIR or v2.x is then the final result,
+not the starting point. Also, collecting codes for a semantic representation will probably
+occur late in the poroject:
+
+![Process Model](process-model.png){:height="400px"}
+<br clear="all"/>  
+
+
 ### MindMap as a starting point
 
 The following mindmap collects and sorts all aspects around blood pressure that are necessary for 
@@ -71,7 +82,7 @@ It can be expected, that this will be done later on.
 
 **Exertion**: That could be managed as a separate observation. The same applies to other relevant details.
 
-### Important next Steps
+### Important next Steps: Information Model
 
 The mindmap above has to be completed, enhanced, and conceptualized into [information models](model.html).
 In addition, all elements must be [described](content.html).
@@ -93,6 +104,7 @@ In addition, all elements must be [described](content.html).
 
 in alphabetical order:
 
+* Bruce Bray
 * Nathan Davis
 * Rob Hausam
 * Stan Huff
