@@ -114,10 +114,11 @@ end legend
 ++++[#88f] author
 ++++[#88f] performer
 ++++[#88f] recorder
-++[#ff8] device
-+++_ type
-+++_ validated?
-+++_ ...
+
++++[#ff8] device
+++++_ type
+++++_ validated?
+++++_ ...
 
 ++[#ff8] <img icon_modifier_extension_complex.png> context
 +++[#ff8] <img icon_modifier_extension_complex.png> positioning of body
