@@ -9,6 +9,8 @@ Therefore, the information models should cover all aspects that are needed to sp
 
 * Bruce: evaluation of cardiac function and physical fitness
 * Naughton
-* stress ekg (includes blood pressure measurements)
+* stress ECG (includes blood pressure measurements)
 * 24h average: measure all 15 minutes for 24 hours
+* tilt
 * ..
+

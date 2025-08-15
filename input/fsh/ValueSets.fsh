@@ -127,7 +127,7 @@ Description: """Codes to measure pulse BP; codes still to be added"""
 
 
 ValueSet: BodyPositionCore
-Id: body_position_core
+Id: body-position-core
 Title: "Blood Pressure Body Position Core"
 Description: """Codes to document Blood Pressure Body Position Core"""
 
@@ -138,15 +138,15 @@ Description: """Codes to document Blood Pressure Body Position Core"""
 
 * ^compose.include[+].system = "http://snomed.sct"
 * ^compose.include[=].concept[+].code = #33586001
-* ^compose.include[=].concept[=].description "Sitting position (finding)"
+//* ^compose.include[=].concept[=].description = "Sitting position (finding)"
 * ^compose.include[=].concept[+].code = #40199007
-* ^compose.include[=].concept[=].description "Supine body position (finding)"
+//* ^compose.include[=].concept[=].description = "Supine body position (finding)"
 
 
 
 
 ValueSet: BodyPositionExtended
-Id: body_position_extended
+Id: body-position-xtended
 Title: "Blood Pressure Body Position Extended"
 Description: """Codes to document Blood Pressure Body Position Extended"""
 
@@ -157,33 +157,33 @@ Description: """Codes to document Blood Pressure Body Position Extended"""
 
 * ^compose.include[+].system = "http://snomed.sct"
 * ^compose.include[=].concept[+].code = #30212006
-* ^compose.include[=].concept[=].description "Fowler's position (finding)"
+//* ^compose.include[=].concept[=].description = "Fowler's position (finding)"
 * ^compose.include[=].concept[+].code = #26527006
-* ^compose.include[=].concept[=].description "Inverse Trendelenburg position (finding)"
+//* ^compose.include[=].concept[=].description = "Inverse Trendelenburg position (finding)"
 * ^compose.include[=].concept[+].code = #102536004
-* ^compose.include[=].concept[=].description "Left lateral decubitus position (finding)"
+//* ^compose.include[=].concept[=].description = "Left lateral decubitus position (finding)"
 * ^compose.include[=].concept[+].code = #414585002
-* ^compose.include[=].concept[=].description "Left lateral tilt (finding)"
+//* ^compose.include[=].concept[=].description = "Left lateral tilt (finding)"
 * ^compose.include[=].concept[+].code = #10904000
-* ^compose.include[=].concept[=].description "Orthostatic body position (finding)"
+//* ^compose.include[=].concept[=].description = "Orthostatic body position (finding)"
 * ^compose.include[=].concept[+].code = #1240000
-* ^compose.include[=].concept[=].description "Prone body position (finding)"
+//* ^compose.include[=].concept[=].description = "Prone body position (finding)"
 * ^compose.include[=].concept[+].code = #102538003
-* ^compose.include[=].concept[=].description "Recumbent body position (finding)"
+//* ^compose.include[=].concept[=].description = "Recumbent body position (finding)"
 * ^compose.include[=].concept[+].code = #423413008
-* ^compose.include[=].concept[=].description "Reverse trendelenburg positioning (finding)"
+//* ^compose.include[=].concept[=].description = "Reverse trendelenburg positioning (finding)"
 * ^compose.include[=].concept[+].code = #102535000
-* ^compose.include[=].concept[=].description "Right lateral decubitus position (finding)"
+//* ^compose.include[=].concept[=].description = "Right lateral decubitus position (finding)"
 * ^compose.include[=].concept[+].code = #415346000
-* ^compose.include[=].concept[=].description "Right lateral tilt (finding)"
+//* ^compose.include[=].concept[=].description = "Right lateral tilt (finding)"
 * ^compose.include[=].concept[+].code = #34106002
-* ^compose.include[=].concept[=].description "Trendelenburg position (finding)"
+//* ^compose.include[=].concept[=].description = "Trendelenburg position (finding)"
 
 
 
 
 ValueSet: BodyPosition
-Id: body_position
+Id: body-position
 Title: "Blood Pressure Body Position"
 Description: """Codes to document Blood Pressure Body Position"""
 

@@ -117,10 +117,11 @@ end legend
 
 +++[#ff8] device
 ++++_ type
+++++_ automated
 ++++_ validated?
 ++++_ ...
 
-++[#ff8] <img icon_modifier_extension_complex.png> context
+++[#ff8] <img icon_modifier_extension_complex.png> context items
 +++[#ff8] <img icon_modifier_extension_complex.png> positioning of body
 ++++[#cff] DT: code
 +++++_ sitting
@@ -138,13 +139,11 @@ end legend
 +++[#ff8] <img icon_modifier_extension_complex.png> method
 ++++[#cff] DT: code
 
-++[#ff8] <img icon_page_n_i.gif> protocol
-+++[#ff8] executable protocol
-++++_ SPRINT
-++++_ NHANES 
-++++_ stress test
-++++_ hypertension management
-++++_ ...
+++[#ff8] <img icon_modifier_extension_complex.png> named context
++++ AOBP
++++ ..
+
+++[#ff8] <img icon_page_n_i.gif> protocol items
 +++[#ff8] duration of measurement
 ++++[#cff] range
 +++++[#cff] start: timestamp
@@ -160,8 +159,6 @@ end legend
 ++++[#cff] DT: code
 +++++[#f88] extern
 ++++++_ arm
-+++++++_ right
-+++++++_ left
 ++++++_ wrist
 ++++++_ ankle
 ++++++_ finger
@@ -171,12 +168,16 @@ end legend
 ++++++_ right heart
 ++++++_ radialis artery
 ++++++_ coronary artery
+++++ laterality
++++++_ right
++++++_ left
 +++[#ff8] measurement setting
 ++++[#cff] DT: code
 +++++_ physician office / clinic / hospital / ED
 +++++_ dwelling / home
 +++[#ff8] tilt (degree)
 ++++[#cff] DT: integer
+++++[#cff] DT: code
 +++[#ff8] aspiration
 ++++_ expiration
 ++++_ inspiration
@@ -192,6 +193,17 @@ end legend
 +++++_ awake
 +++++_ unconscious
 +++++_ sleeping
+
+++[#ff8] <img icon_page_n_i.gif> executable protocol
++++ orthostatic: supine -> sitting -> standing
++++ tilt: position + tilt
++++ SPRINT
++++ NHANES 
++++ stress test
+++++ activity level: increase
+++++ medication
++++ hypertension management
++++ ...
 
 ++[#ff8] comment
 +++[#cff] DT: text
