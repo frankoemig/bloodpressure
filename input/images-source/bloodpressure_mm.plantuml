@@ -108,9 +108,6 @@ end legend
 ++++[#cff] DT: dateTime
 
 +++[#88f] involved persons
-++++[#88f] subject
-+++++_ age
-+++++_ gender
 ++++[#88f] author
 ++++[#88f] performer
 ++++[#88f] recorder
@@ -122,6 +119,9 @@ end legend
 ++++_ ...
 
 ++[#ff8] <img icon_modifier_extension_complex.png> context items
++++[#88f] subject
+++++_ age
+++++_ gender
 +++[#ff8] <img icon_modifier_extension_complex.png> positioning of body
 ++++[#cff] DT: code
 +++++_ sitting

@@ -4,7 +4,7 @@ table tr:nth-child(even) {background: #EEE}
 table tr:nth-child(odd) {background: #FFF}
 </style>
 
-What is the process to get to product family specific artefacts?
+What is the process to result in product family specific artefacts?
 
 <div>
 {% include process.svg width='600px' %}
