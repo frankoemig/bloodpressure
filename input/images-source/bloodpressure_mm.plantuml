@@ -65,6 +65,12 @@ end legend
 ----_ influences the results \nof the measurement
 ----[#cff] boolean
 ----[#fcc] MedicationAdministration
+---[#cfc] <img icon_modifier_extension_complex.png> anaesthesia
+----[#cff] DT: code
+-----_ before
+-----_ during
+-----_ after
+----[#fcc] anaesthetica
 ---[#cfc] <img icon_modifier_extension_complex.png> current/former exercise assocation
 ----[#cff] DT: code
 -----_ sleeping
@@ -84,21 +90,21 @@ end legend
 -----_ biking
 ----[#cff] DT: PQ
 -----_ Watts
----[#cfc] timing
-----_ pre
-----_ during
-----_ post
+----[#cfc] timing
+-----_ pre
+-----_ during
+-----_ post
 ---[#cfc] <img icon_modifier_extension_complex.png> body weight
 ----_ relevant for a correct interpretation
 ---[#cfc] <img icon_modifier_extension_complex.png> pulse
 ----[#cff] PQ
 ----[#cff] Reference
----[#cfc] <img icon_modifier_extension_complex.png> anaesthesia
-----[#cff] DT: code
------_ before
------_ during
------_ after
-----[#fcc] anaesthetica
+---[#cfc] <img icon_modifier_extension_complex.png> exertion/activity
+----[#cfc] status
+----- in rest, sitting, sleeping
+----[#cfc] level/type/intensity
+----- Watts
+----- Energy Consumption (Nutrition)
 
 ++[#ff8] administrative
 +++[#fcc] identifier

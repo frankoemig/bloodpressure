@@ -32,7 +32,7 @@ The mindmap uses colors to indicate the following:
 * yellow: details from context or protocols
 * white: specific protocols
 
-#### Some Notes on the mindmap
+#### Some Notes on the MindMap
 
 * value on the left
   * w/ red background: assembles all details dealing with the measured value itself
@@ -40,8 +40,9 @@ The mindmap uses colors to indicate the following:
 * context items: relevant details to correctly interpret the data
 * named context: predefined specific settings for documenting the context, eg. sitting + in rest + in hospital, sitting + at home
 * protocol item: 'meta-data' about the measurements that are important to document or to alter for specific protocols
-* executable protocol: individual protocols that describe a set of specific bp measurements
+* [executable protocol](protocols.html): individual protocols that describe a set of specific bp measurements (with some known details)
 * sleep status: this has been replaced by consciousness to also allow for "unconscious" as a separate value.
+* activity, consciousness, exertion: these concepts overlap 
 * event: Some people increase their blood pressure by just seeing a physician, or for other reasons. Not sure whether this is relevant information, but it should not be left out.
 * the device drives the method (unfortunately this cannot be expressed in the mindmap)
 
@@ -49,7 +50,8 @@ The mindmap uses colors to indicate the following:
 
 * **Anaesthesia, Medication**
 * **Exertion**: That could be managed as a separate observation. The same applies to other relevant details.
-* **Body Weight**
+  * activity (status, level)
+* **Body Weight** (esp. overweight is important to know)
 * **Pulse**
 
 ### Important next Steps: Information Model

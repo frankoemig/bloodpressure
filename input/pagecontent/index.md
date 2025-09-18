@@ -25,20 +25,24 @@ This guide shall start from the opposite side by specifying the details and thei
 
 ### Scope of Use
 
-Following is the overall high-level information model that places bllod pressure in the middle (in light green).
+Following is the overall high-level information model that places blood pressure in the middle (in light green).
 Describing details are referenced in blue. 
 Artefacts in brown represent other concepts this one has relations with
-but that are not specified further. (This will be handled by other guides that are created the same way.):
+but that are not specified further. (This will be handled by other guides that are created the same way
+and interlinked with this one.):
 
 ![Blood Pressure](bloodpressure-model.png){:height="400px"}
 <br clear="all"/>  
+
+It is important to note that between a *simple* observation and a *protocol* perhaps consisting of certain
+individual observations must be distinguished, even if the protocol only consists of a single observation.
 
 ### How to proceed in this project?
 
 In this project, the starting point is a collection of artefacts that are necessary to consider
 in a technical representation. Therefore, a profile in FHIR or v2.x is then the final result,
 not the starting point. Also, collecting codes for a semantic representation will probably
-occur late in the poroject:
+occur late in the project:
 
 ![Process Model](process-model.png){:height="400px"}
 <br clear="all"/>  
@@ -47,8 +51,9 @@ Therefore, this project will proceed according to the following steps:
 
 1. create a [mindmap](mindmap.html) that collects all relevant details that are necessary to consider somehow
 2. create an [information model](model.html) that establishes relationships for all collected details
-3. derive profiles when trying to serialize the model
-4. transfer the profile into a technology
+3. derive a serialized model
+4. derive profiles depending on the serialized model
+5. transfer the profile into a technology
   * [v2.x](v2.html)
   * [V3/CDA](cda.html)
   * [FHIR](fhir.html)
