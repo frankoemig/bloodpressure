@@ -1,0 +1,75 @@
+Logical: BloodPressureMindMap
+Parent: Base
+Id: BloodPressureMindMap
+Title: "Blood Pressure MindMap"
+Description: """
+<font color='red'>This Logical Model is used to document the details of the <b>mindmap for Blood Pressure</b> and 
+is therefore just a serialization of the <a href="mindmap.html">mindmap</a>.</font>
+"""
+
+* ^version = "0.1.0"
+* ^abstract = false
+* ^type = "http://bloodpressure.oemig.de/fhir/StructureDefinition/BloodPressureMindMap"
+* . ^definition = "Blood Pressure MindMap"
+
+* insert HeaderDetailRules
+
+
+//* ^extension[0].url = "http://hl7.org/fhir/tools/StructureDefinition/logical-target"
+//* ^extension[=].valueBoolean = true
+
+
+* administrative 0..1 BackboneElement "administrative information" "this element anchors all details that are needed as additional administrative information"
+  * identifier 0..1 Identifier "identifier" "how to identify this observation"
+  * observedTime 0..1 instant "when observed"
+  * recordedDateTime 0..1 instant "when entered into system"
+  * device 0..1 string "device" "information about the device used to perform this observation"
+* measuredValue 0..1 BackboneElement "details of measurements" 
+  * systolicBloodPressure 0..1 positiveInt "systolic blood pressure"
+    * referenceRange 0..1 BackboneElement "reference range"
+  * diastolicBloodPressure 0..1 positiveInt "diastolic blood pressure"
+    * referenceRange 0..1 BackboneElement "reference range"
+  * unit 0..1 CodeableConcept "unit of measurement" "it is assumed that all measured details are using the same units"
+  * referenceRange 0..1 BackboneElement "reference range"
+    * age 0..1 Reference(Observation) "the reference range is depending on the age of the subject"
+    * gender 0..1 Reference(Observation) "the reference range is depending on the (clinical) gender of the subject"
+    * lowerBound 0..1 positiveInt "lower bound"
+    * upperBound 0..1 positiveInt "upper bound"
+  * interpretation 0..1 CodeableConcept "interpretation"
+* calculatedValue 0..1 BackboneElement "some values are calculated from (different) measurements" 
+  * meanArterialPressure 0..1 string "mean arterial pressure" "calculation by integrating a set of individual measurements"
+  * pulsePressure 0..1 string "pulse pressure"
+* contextItem 0..1 BackboneElement "context item" "context relevant details"
+  * subject 0..1  BackboneElement "who is the subject of this observation. Normally, it is the patient"
+    * age 0..1 positiveInt "the age of the observed subject"
+    * gender 0..1 CodeableConcept "clinically relevant gender information"	
+* namedContext 0..1  BackboneElement "the following represent individual measurements with a specific context established"
+  * aobp 0..1 integer "automated office blood pressure" "single measurement in a physician office"
+    * sitting 0..1 boolean "patient is sitting"
+    * inRest 0..1 boolean "patient is in rest, or at least in rest for a certain amount of time"
+    * deviceIsProfessional 0..1 boolean "professional automated and calibrated device"
+  * homeHealthMeasurement 0..1 integer "patient is measuring his blood pressure at home"
+    * device 0..1 boolean "unknown, probably semi-professional"
+    * atWrist 0..1 boolean "measured at his wrist"
+* protocolItems 0..*  BackboneElement "additional items" "these items are normally irrelevant (or less relevant) but are required for certain measurements"
+  * locationAtBody 0..1 BackboneElement "where at the body is the measurement performed?"
+    * externalLocatonAtBody 0..1 CodeableConcept "external location"
+    * internalLocatonAtBody 0..1 CodeableConcept "internal location"
+    * side 0..1 CodeableConcept "left or right"
+  * measurementSetting 0..1 CodeableConcept "environmental condition during measurement" 
+  * tilt 0..1 positiveInt "tilt in degrees"
+  * aspiration 0..1 CodeableConcept "aspiration"
+  * event 0..1 CodeableConcept "event going on"
+  * cuffType 0..1 CodeableConcept "cuff type"
+  * consciousness 0..1 CodeableConcept "conscious level of the patient: awake, sleeping, ..."
+* executableProtocol 0..*  BackboneElement "a set of different protocols that could be executed" "what protocols do exist and what do they refer to?"
+  * orthostatic 0..1 string "orthostatic"
+  * SPRINT 0..1 BackboneElement "SPRINT"
+  * NHANES 0..1 BackboneElement "NHANES"
+  * stressTest 0..1 BackboneElement "stress test"
+* otherRelevantConcepts 0..1 BackboneElement "which other measurements may be relevant for blood pressure observations?"
+  * currentOrFormerExercises 0..1 Observation "current (or shortly before) performed exercises with an increased activity"
+  * bodyWeight 0..1 Observation "body weight of the subject"
+  * pulse 0..1 Observation "pulse of the subject"
+  * exertion 0..1 Observation "relates to currentOrFormerExercises" "level of physical exercising, including the indication of performed exercises shortly before the measurement"
+* comment 0..1 string "any comment relevant for correct interpretation"

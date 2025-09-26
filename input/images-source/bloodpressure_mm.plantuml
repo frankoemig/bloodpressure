@@ -10,17 +10,17 @@ Legend:
 <img icon_page_n_i.gif> addt'l information
 end legend
 
-+ **Blood** \n**Pressure**
++ [[StructureDefinition-BloodPressureMindMap.html Blood \nPressure]]
 
 --[#ff8] measured value
 ---[#fcc] systolic
-----[#cff] DT: integer
+----[#cff] DT: positiveInt
 -----_ range: 0-400
 ----[#fcc] reference range
 -----_ range: 0-400
 -----_ age: integer
 ---[#fcc] diastolic
-----[#cff] DT: integer
+----[#cff] DT: positiveInt
 -----_ range: 0-400
 -----_ age: integer
 ----[#fcc] reference range
@@ -103,7 +103,7 @@ end legend
 ----[#cfc] status
 ----- in rest, sitting, sleeping
 ----[#cfc] level/type/intensity
------ Watts
+----- Energy Consumption (Activity)
 ----- Energy Consumption (Nutrition)
 
 ++[#ff8] administrative

@@ -9,8 +9,8 @@ name: Blood-Pressure
 title: Blood Pressure Cross-Country Cross-Language Cross-Paradigm (Demo) IG
 description: Cross-Country, cross-paradigm Demo-Implementation Guide for Blood Pressure Measurements
 status: draft # draft | active | retired | unknown
-version: 0.3.1
-date: 2025-09-18
+version: 0.3.2
+date: 2025-09-26
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -197,6 +197,7 @@ groups:
     name: Abstract Logical Models for Content
     description: Following the LMs independent from any standard.
     resources:
+    - StructureDefinition/BloodPressureMindMap
     - StructureDefinition/BloodPressure
     - StructureDefinition/BloodPressureAverage
   GroupB:
