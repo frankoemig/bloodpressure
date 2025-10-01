@@ -1,0 +1,93 @@
+@startuml
+
+skinparam svgDimensionStyle false
+
+abstract class "Blood Pressure" as abp  {
+    identifier
+    name
+    description
+    interpretation
+    method
+    device
+    location
+    position
+    tilt
+    recordedDateTime
+    performedDateTime
+    cuffType
+    cuffSize
+    comment
+}
+
+class "Calculated BP" as cbp {
+    function
+}
+class "Measure BP" as mbp
+class "Integrated BP" as ibp
+
+abstract class "Protocol" as prot {
+    name
+    description
+}
+abstract class "Performer" as perf
+class "Recorder" as rec
+
+class "Patient" as pat
+class "Practitioner" as prac
+
+abstract class "BP Value" as val {
+    value
+    unit
+    range
+    interpretation
+}
+class "systolic" as sys
+class "diastolic" as diast
+
+val <|-- sys
+val <|-- diast
+
+abp <|-- cbp
+abp <|-- mbp
+abp <|-- ibp
+
+abp *-- val
+
+
+prot *-- "0..*" cbp : results in >
+prot o-- "1..*" mbp : measures >
+
+perf .. abp : performs >
+perf .. prot : performs >
+
+perf <|-- pat
+perf <|-- prac
+perf <|-- rec
+
+abstract class "Medication" as med
+class "BP relevant Medication" as bpmed
+class "BP irrelevant Medication" as bpmed2
+
+med <|-- bpmed
+med <|-- bpmed2
+
+class "Body Weight" as bw {
+    value
+    dateTime
+}
+
+abp .. bpmed : consider <
+abp .. bw : consider <
+
+class "Exertion" as exer {
+    intensity
+    duration
+}
+
+pat .. exer : exercises >
+pat .. "0..*" bw : has >
+pat .. bpmed : takes >
+
+abp .. exer : consider <
+
+@enduml

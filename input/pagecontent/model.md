@@ -4,10 +4,10 @@ table tr:nth-child(even) {background: #EEE}
 table tr:nth-child(odd) {background: #FFF}
 </style>
 
-Blood pressure measurements seem to appear to be obiously simple.
+Blood pressure measurements seem to appear to be obviously simple.
 However, discussions reveal that the details allow for interpretations.
 An initiator for this discussion is LOINC. It represents a collection of codes whose 
-underlying concepts are overlapping in their semantics. For example,
+underlying concepts are overlapping in their semantics. For example, the two codes
 
 * 87741-5 = systolic blood pressure - post exercise
 * 8459-0 = systolic blood pressure - sitting
@@ -23,7 +23,7 @@ The only way out is an exact definition in form ob class diagrams.
 ### Base Model
 
 First, the details from the landing page should be aggregated in form of classes and linked together now.
-The important items are in bold:
+The important items are marked in bold:
 
 <div width="500px">
 {% include base_model.svg %}
@@ -49,6 +49,15 @@ and problems when using the according profiles.
 In most use cases, probably 99%, only non-invasive measurements obtained during routine 
 is considered or of interest resp. in scope. Nevertheless, when talking about blood pressure the
 remaining 1% must be considered as well.
+
+### Overview Model
+
+All that may result in aka overview model:
+
+<div width="500px">
+{% include overview_model.svg %}
+</div>
+
 
 ### Spot vs. calculated Measurements 
 
