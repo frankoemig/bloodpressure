@@ -28,6 +28,7 @@ The expanded value sets can be found:
 ### Links to Other Guides
 
 
+- https://www.ahajournals.org/doi/10.1161/HYP.0000000000000087
 - [CIMI: Vital Signs](https://build.fhir.org/ig/HL7/cimi-vital-signs/)
 - US Core [Artifacts](https://build.fhir.org/ig/HL7/US-Core/profiles-and-extensions.html#profiles)
   - https://www.hl7.org/fhir/us/vitals/STU1

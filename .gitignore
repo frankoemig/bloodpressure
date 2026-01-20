@@ -6,3 +6,5 @@ Thumbs.db
 /output
 /temp
 /template
+_validate.bat
+validation_result.txt
