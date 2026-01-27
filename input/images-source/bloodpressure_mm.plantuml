@@ -132,6 +132,7 @@ end legend
 ++++[#cff] DT: code
 +++++_ sitting
 +++++_ standing
++++++_ supine
 +++++_ reclining
 +++++_ lying
 ++++++_ lying on back
@@ -146,7 +147,9 @@ end legend
 ++++[#cff] DT: code
 
 ++[#ff8] <img icon_modifier_extension_complex.png> named context
++++ ABI
 +++ AOBP
++++ SMBP
 +++ ..
 
 ++[#ff8] <img icon_page_n_i.gif> protocol items
@@ -187,6 +190,12 @@ end legend
 +++[#ff8] aspiration
 ++++_ expiration
 ++++_ inspiration
++++[#ff8] measurement setting
+++++_ pre-surgery
+++++_ intra-surgery
+++++_ post-surgery
+++++_ post-dose
+++++_ ...
 +++[#ff8] event
 ++++_ normal
 ++++_ stressed by someone/thing
