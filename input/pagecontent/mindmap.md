@@ -11,15 +11,21 @@ a correct interpretation and clinical use.
 It has to be recognized that some artifacts (eg. reference range) are abbreviated, and the corresponding details 
 must be duplicated. Unfortunately, PlantUML mindmaps do not allow for cross-links to denote that.
 
-The following diagram aggregates all aspects that can be found somewhere.
-It tries to arrange them in a way that helps to understand the semantics,
-and to sort them.
+The following diagram aggregates all aspects that can be found somewhere, are provided as contributions,
+or are extracted from discussions. (At this point a small thank you to all participants.)
+The mindmap tries to arrange them in a way that helps to understand the semantics, and to sort them.
 For the moment, additional explanatory text has not been duplicated from other sources for copyright and IP reasons.
 It can be expected, that this will be done later on.
+
+It is intended to add the documentation in the logical model associated with this mindmap.
+But please recognize that the LM is no replacement for an information model 
+that will be derived from the mindmap.
 
 <div>
 {% include bloodpressure_mm.svg width='600px' %}
 </div>
+
+Further contributions or amendments are welcome.
 
 #### Coloring Scheme
 
@@ -30,7 +36,7 @@ The mindmap uses colors to indicate the following:
 * light green: artefacts that are better provided as separate models
 * dark blue: involved persons
 * yellow: details from context or protocols
-* white: specific protocols
+* light gray: specific protocols
 
 #### Some Notes on the MindMap
 
@@ -38,7 +44,7 @@ The mindmap uses colors to indicate the following:
   * w/ red background: assembles all details dealing with the measured value itself
   * w/ green background: other "mini models" that may provide important details but are not directly specified here
 * context items: relevant details to correctly interpret the data
-* named context: predefined specific settings for documenting the context, eg. sitting + in rest + in hospital, sitting + at home
+* measurement setup / amed context: predefined specific settings for documenting the context, eg. sitting + in rest + in hospital, sitting + at home
 * protocol item: 'meta-data' about the measurements that are important to document or to alter for specific protocols
 * [executable protocol](protocols.html): individual protocols that describe a set of specific bp measurements (with some known details)
 * sleep status: this has been replaced by consciousness to also allow for "unconscious" as a separate value.
@@ -46,10 +52,15 @@ The mindmap uses colors to indicate the following:
 * event: Some people increase their blood pressure by just seeing a physician, or for other reasons. Not sure whether this is relevant information, but it should not be left out.
 * the device drives the method (unfortunately this cannot be expressed in the mindmap)
 
+The [mindmap logical model](StructureDefinition-BloodPressureMindMap.html) allows for more explanations on the details of the mindmap.
+
 ### Other models
 
+It is hard to draw a line where to stop. Some information is better provided as a separate information model
+so that we can link to that. Following some examples derived from the mindmap above:
+
 * **Anaesthesia, Medication**
-* **Exertion**: That could be managed as a separate observation. The same applies to other relevant details.
+* **Exertion/Activity**: That could be managed as a separate observation. The same applies to other relevant details.
   * activity (status, level)
 * **Body Weight** (esp. overweight is important to know)
 * **Pulse**
