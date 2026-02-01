@@ -62,7 +62,7 @@ so that we can link to that. Following some examples derived from the mindmap ab
 * **Anaesthesia, Medication**
 * **Exertion/Activity**: That could be managed as a separate observation. The same applies to other relevant details.
   * activity (status, level)
-* **Body Weight** (esp. overweight is important to know)
+* [**Body Weight**](https://build.fhir.org/ig/frankoemig/bodyweight/) (esp. overweight is important to know)
 * **Pulse**
 
 ### Important next Steps: Information Model

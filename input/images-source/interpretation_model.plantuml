@@ -3,7 +3,7 @@
 class "**[[StructureDefinition-BloodPressure.html Blood Pressure]]**" as bp {
 }
 
-class "Body Weight" as bw
+class "Body Weight" as bw #cfc
 Note left of bw
 necessary to interpret
 the measurement, but 
@@ -12,20 +12,20 @@ end Note
 
 package "Medication" as pkg1 {
 
-    abstract class "Medication" as med
+    abstract class "Medication" as med #cfc
 
-    class "relevant" as relevant
-    class "irrelevant" as irrelevant
+    class "relevant" as relevant #cfc
+    class "irrelevant" as irrelevant #cfc
 
     med <|-- relevant
     med <|-- irrelevant
 }
 
-class "Exertion" as ex
+class "Exertion" as ex #cfc
 class "Positioning" as pos
 class "Cuff Size" as cuffsize
 Note right of cuffsize
-normally, the cuffsoize does not matter,
+normally, the cuffsize does not matter,
 but in rare circumstances
 it is relevant to know
 (eg. too small for an athletic person)

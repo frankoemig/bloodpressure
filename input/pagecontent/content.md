@@ -16,10 +16,31 @@ this page is in a very draft state. It can be expected to enhance it at later po
 | special invasive measurements | special bp measurement that require a surgery |
 | pulse pressure | calculated value out of systolic and diastolic values |
 | spot measurement | to be included in average calculations |
-| average value | calculated value, optionally with references to the individual measurements; <br/> some average values are treated as a single spot value because the source values appear over a short period of time |
+| long-term value(s) | calculated value, optionally with references to the individual measurements; <br/> some average values are treated as a single spot value because the source values appear over a short period of time |
 | involved actors | who is involved into measuring bp values: physician, patient, recorder, .. |
 | relevant medication |
 | ... |
+
+### Information Model vs. Use Case
+
+The information model has to cover all details that are mentioned in the mind-map.
+It must be possible to derive a data representation that allows for storing all details while 
+maintaining the relationships (and cardinality) between the different data elements.
+
+Special measurement settings are then instantiations for a single measurement.
+Executable protocols represent sequences of those measurements that require the storage of multiple measurements.
+
+### Method and Device
+
+Methods and devices overlap. Some methods can only be executec with certain devices and vice-versa.
+
+| Method | Device |
+| | manual | automatic | ... |
+| --- | --- |
+| pulpation | |
+| oscultation | |
+| ... | ... |
+
 
 ### Open Issues
 

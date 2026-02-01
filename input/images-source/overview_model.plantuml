@@ -29,11 +29,11 @@ abstract class "Protocol" as prot {
     name
     description
 }
-abstract class "Performer" as perf
-class "Recorder" as rec
+abstract class "Performer" as perf #88f
+class "Recorder" as rec #88f
 
-class "Patient" as pat
-class "Practitioner" as prac
+class "Patient" as pat #88f
+class "Practitioner" as prac #88f
 
 abstract class "BP Value" as val {
     value
@@ -64,14 +64,14 @@ perf <|-- pat
 perf <|-- prac
 perf <|-- rec
 
-abstract class "Medication" as med
-class "BP relevant Medication" as bpmed
-class "BP irrelevant Medication" as bpmed2
+abstract class "Medication" as med #cfc
+class "BP relevant Medication" as bpmed #cfc
+class "BP irrelevant Medication" as bpmed2 #cfc
 
 med <|-- bpmed
 med <|-- bpmed2
 
-class "Body Weight" as bw {
+class "Body Weight" as bw #cfc {
     value
     dateTime
 }
@@ -79,7 +79,7 @@ class "Body Weight" as bw {
 abp .. bpmed : consider <
 abp .. bw : consider <
 
-class "Exertion" as exer {
+class "Exertion" as exer #cfc {
     intensity
     duration
 }

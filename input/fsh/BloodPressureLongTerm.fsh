@@ -1,8 +1,12 @@
-Logical: BloodPressureAverage
+Logical: BloodPressureLongTerm
 Parent: Base
-Id: BloodPressureAverage
-Title: "Average Blood Pressure LM"
-Description: "This is the Logical Model for **Average Blood Pressure**"
+Id: BloodPressureLongTerm
+Title: "Long-term Blood Pressure LM"
+Description: """
+This is the Logical Model for **Long-term Blood Pressure** Measurements.
+
+It is a set of calculated values for a specific period of time, eg. during night.
+"""
 
 * ^version = "0.1.0"
 * ^abstract = false

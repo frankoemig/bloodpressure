@@ -40,6 +40,8 @@ end legend
 -----_ critical high
 
 --[#ff8] calculated value
+--- number of measured values
+--- duration (start/end)
 ---[#fcc] meanArterialPressure
 ----[#cff] DT: integer
 -----_ range: 60-100
@@ -59,6 +61,15 @@ end legend
 ----[#cff] DT: integer
 -----_ range: 0-1000
 ----[#fcc] reference range
+---[#fcc] calculating function
+----[#fcc] min
+----[#fcc] average
+----[#fcc] max
+----[#fcc] long-term
+-----[#fcc] start/end
+------[#cff] DT: timestamp
+-----[#fcc] value
+----[#fcc] difference/delta
 
 --[#cfc]  <img icon_modifier_extension_complex.png> other relevant concepts
 ---[#cfc] <img icon_modifier_extension_complex.png> medication
@@ -123,12 +134,6 @@ end legend
 ++++[#88f] performer
 ++++[#88f] recorder
 
-+++[#ff8] device
-++++_ type
-++++_ automated
-++++_ validated?
-++++_ ...
-
 ++[#ff8] <img icon_modifier_extension_complex.png> context items
 +++[#88f] subject
 ++++_ age
@@ -150,12 +155,17 @@ end legend
 ++++[#cff] DT: code/integer
 +++[#ff8] <img icon_modifier_extension_complex.png> method
 ++++[#cff] DT: code
-
-++[#ff8] <img icon_modifier_extension_complex.png> measurement setup \n(named context)
-+++ ABI
-+++ AOBP
-+++ SMBP
-+++ ..
++++++_ pulpation
++++++_ oscultation
++++++_ automated cuff
++++++_ catheter
++++[#ff8] device
+++++[#ff8] type
+++++[#ff8] measuring
++++++_ automated
++++++_ validated?
++++++_ ...
++++[#cfc] exertion \n(see lower left corner)
 
 ++[#ff8] <img icon_page_n_i.gif> protocol items
 +++[#ff8] duration of measurement
@@ -216,9 +226,15 @@ end legend
 +++++_ unconscious
 +++++_ sleeping
 
+++[#ff8] <img icon_modifier_extension_complex.png> measurement setup \n(named context)
++++ AOBP
++++ SMBP
++++ ..
+
 ++[#ff8] <img icon_page_n_i.gif> executable protocol
 +++ orthostatic: supine -> sitting -> standing
 +++ tilt: position + tilt
++++ ABI
 +++ SPRINT
 +++ NHANES 
 +++ stress test

@@ -17,11 +17,19 @@ class "**[[StructureDefinition-BloodPressure.html Blood Pressure]]**" as bp {
     comment: string
 }
 
-abstract class "Blood Pressure Value" as bpv {
-    value: integer
-    unit = mm[Hg]
-    referenceRange: range
-    interpretation: code
+package "Measurement" {
+    abstract class "Blood Pressure Value" as bpv {
+        value: integer
+        unit = mm[Hg]
+        referenceRange: range
+        interpretation: code
+    }
+
+    class "Reference Range" as rr {
+        low : integer
+        high: integer
+        age: range
+    }
 }
 
 class "**Systolic BP**" as syst
@@ -29,28 +37,30 @@ class "**Diastolic BP**" as diast
 class "Mean Arterial Pressure" as mabp
 class "Pulse Pressure" as pbp
 
-class "Reference Range" as rr {
-    low : integer
-    high: integer
-    age: range
+
+package "Other Relevant Concepts" {
+    class "Body Weight" as bw #cfc
+    Note right of bw
+    necessary to
+    interpret
+    the measurement
+    end Note
+    class "Medication" as med #cfc
+
 }
 
-class "Body Weight" as bw
-Note right of bw
-necessary to
-interpret
-the measurement
-end Note
-class "Medication" as med
-class "Author" as a
-class "Performer" as p
-Note right of p
-normally a physician,
-but could also
-be the patient
-end Note
 
-class "Recorder" as r
+package "Participation" {
+    class "Author" as a #88f
+    class "Performer" as p #88f
+    Note right of p
+    normally a physician,
+    but could also
+    be the patient
+    end Note
+    class "Recorder" as r #88f
+}
+
 class "Subject" as s
 Note left of s
 normally
