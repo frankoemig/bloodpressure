@@ -34,8 +34,12 @@ package "Measurement" {
 
 class "**Systolic BP**" as syst
 class "**Diastolic BP**" as diast
-class "Mean Arterial Pressure" as mabp
 class "Pulse Pressure" as pbp
+
+package "Calculation" as calc {
+    class "Mean Arterial Pressure" as mabp
+    class "Long-Term BP" as lt
+}
 
 
 package "Other Relevant Concepts" {
@@ -51,21 +55,34 @@ package "Other Relevant Concepts" {
 
 
 package "Participation" {
+    abstract class "Role" as rol #88f 
     class "Author" as a #88f
     class "Performer" as p #88f
-    Note right of p
+    Note left of p
     normally a physician,
     but could also
     be the patient
     end Note
     class "Recorder" as r #88f
+
+    class "Person" as pers #88f {
+        identifier
+        name
+    }
+    rol "0..*" -left- "1" pers
+
+    class "Subject" as s #88f
+    Note left of s
+    normally
+    the patient
+    end Note
+
+    rol <|-- a
+    rol <|-- p
+    rol <|-- r
+    rol <|-- s
 }
 
-class "Subject" as s
-Note left of s
-normally
-the patient
-end Note
 
 bpv <|-up- syst
 bpv <|-up- diast

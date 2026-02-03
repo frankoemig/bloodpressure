@@ -1,0 +1,28 @@
+@startuml
+
+Title "Notation"
+
+abstract class "Abstract Class" as abs {
+    generalAttribute
+}
+class "Class 1" as c1 {
+    specialAttributeForClass1
+}
+class "Class 2" as c2 {
+    specialAttributeForClass2
+}
+ 
+class "related Class" as rel
+
+class "Component 1" as comp1
+class "Component 2" as comp2
+
+abs <|-- c1
+abs <|-- c2
+
+abs "a..b" -- "m..n" rel : < to abstract
+
+rel *-- comp1
+rel o-- comp2
+
+@enduml

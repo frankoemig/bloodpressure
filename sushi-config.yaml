@@ -5,12 +5,12 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: bloodpressure
 canonical: http://bloodpressure.oemig.de/fhir
-name: Blood-Pressure
+name: Blood-Pressure-Information-Model-IG
 title: Blood Pressure Cross-Country Cross-Language Cross-Paradigm (Demo) IG
 description: Cross-Country, cross-paradigm Demo-Implementation Guide for Blood Pressure Measurements
 status: draft # draft | active | retired | unknown
-version: 0.5.0
-date: 2026-02-01
+version: 0.5.1
+date: 2026-02-03
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -74,6 +74,8 @@ pages:
       title: References
     download.md:
       title: Download
+    notation.md:
+      title: Notation
 #   implementation.xml:
 #   examples.xml:
 #     title: Examples Overview
@@ -125,6 +127,7 @@ menu:
   Other:
     Download: download.html
     References: references.html
+    Notation: notation.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │

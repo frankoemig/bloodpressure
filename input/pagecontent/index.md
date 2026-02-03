@@ -23,7 +23,7 @@ This guide shall start from the opposite side by specifying the details and thei
 >
 > Vital Signs in contrast should derive a subset out of the details specified within this guide.
 
-### Scope of Use
+### Purpose / Scope of Use
 
 Following is the overall high-level information model that places blood pressure in the middle (in light green).
 Describing details are referenced in blue. 
@@ -83,7 +83,7 @@ Therefore, this project will proceed according to the following steps:
 
 ### Involved groups
 
-The following HL7 WG should be involved:
+The following HL7 WG are involved in this project:
 
 * Orders & Observations
 * CIMI
@@ -93,16 +93,18 @@ The following HL7 WG should be involved:
 Another target is to invite for contributions and participation.
 The primary author is happy to get comments and further input.
 
-### Acknowledgements
+### Authors and Contributors
 
 This Implementation Guide was made possible by the thoughtful contributions of the following people 
 and organizations (in alphabetical order):
 
-* Bruce Bray
-* Nathan Davis
-* Rob Hausam
-* Stan Huff
-* Claude Nanjo
-* Alina Oemig
-* Frank Oemig (IG author)
+| Role | Name | Organization | Contact |
+| --- | --- | --- | --- |
+| Contributor | Bruce Bray | 
+| Contributor | Nathan Davis | 
+| Contributor | Rob Hausam | 
+| Contributor | Stan Huff | Intermountain Health |
+| Contributor | Claude Nanjo | |
+| Contributor | Alina Oemig | |
+| Primary Editor & Contributor | Frank Oemig (IG author) | | hl7@oemig.de
 
