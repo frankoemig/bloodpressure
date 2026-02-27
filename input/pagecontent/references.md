@@ -33,7 +33,7 @@ As stated already, they are all at least incomplete.
     * component[systolic]
       * code.coding.system = $LOINC
       * code.coding.code = #8480-6
-      * valueQuantity.value = <value>
+      * valueQuantity.value = VALUE
       * valueQuantity.unit = string
       * valueQuantity.system = $UCUM
       * valueQuantity.code = "mm[Hg]"
@@ -43,7 +43,7 @@ As stated already, they are all at least incomplete.
     * component[diastolic]
       * code.coding.system = $LOINC
       * code.coding.code = #8462-4
-      * valueQuantity.value = <value>
+      * valueQuantity.value = VALUE
       * valueQuantity.unit = string
       * valueQuantity.system = $UCUM
       * valueQuantity.code = "mm[Hg]"
@@ -61,14 +61,14 @@ As stated already, they are all at least incomplete.
     * dataAbsentReason
     * component[systolic].code.coding.system = $LOINC
     * component[systolic].code.coding.code = #8480-6
-    * component[systolic].valueQuantity.value = <value>
+    * component[systolic].valueQuantity.value = VALUE
     * component[systolic].valueQuantity.unit = string
     * component[systolic].valueQuantity.system = $UCUM
     * component[systolic].valueQuantity.code = "mm[Hg]"
     * component[systolic].dataAbsentReason
     * component[diastolic].code.coding.system = $LOINC
     * component[diastolic].code.coding.code = #8462-4
-    * component[diastolic].valueQuantity.value = <value>
+    * component[diastolic].valueQuantity.value = VALUE
     * component[diastolic].valueQuantity.unit = string
     * component[diastolic].valueQuantity.system = $UCUM
     * component[diastolic].valueQuantity.code = "mm[Hg]"
@@ -87,10 +87,10 @@ As stated already, they are all at least incomplete.
     * code.coding.code = #85354-9
     * component[systolisch].code.coding.system = "**fhir.kbv.de/CodeSystem/KBV_CS_AW_Blutdruck_Typen**"
     * component[systolisch].code.coding.code = "**systolisch**"
-    * component[systolisch].valueQuantity = <value>
+    * component[systolisch].valueQuantity = VALUE
     * component[diastolisch].code.coding.system = "**fhir.kbv.de/CodeSystem/KBV_CS_AW_Blutdruck_Typen**"
     * component[diastolisch].code.coding.code = "**diastolisch**"
-    * component[diastolisch].valueQuantity = <value>
+    * component[diastolisch].valueQuantity = VALUE
     * other attributes: forbidden
   * 4.2.0  https://simplifier.net/pvs-archivierungs-undwechselschnittstelle/kbv_pr_aw_observation_blutdruck
 * openEHR CKM

@@ -12,6 +12,18 @@ end legend
 
 + [[StructureDefinition-BloodPressureMindMap.html Blood \nPressure]]
 
+--[#ff8] administrative
+---[#fcc] identifier
+---[#fcc] observedDateTime
+----[#cff] DT: instant | dateTime | period
+---[#fcc] recordedDateTime
+----[#cff] DT: dateTime
+
+---[#88f] involved persons
+----[#88f] author
+----[#88f] performer
+----[#88f] recorder
+
 --[#ff8] measured value
 ---[#fcc] systolic
 ----[#cff] DT: positiveInt
@@ -19,18 +31,17 @@ end legend
 ----[#fcc] reference range
 -----_ range: 0-400
 -----_ age: integer
+-----_ gender: code
 ---[#fcc] diastolic
 ----[#cff] DT: positiveInt
 -----_ range: 0-400
------_ age: integer
 ----[#fcc] reference range
 -----_ range: 0-400
+-----_ age: integer
+-----_ gender: code
 ---[#fcc] unit
 ----[#cff] DT: code
 -----_ mmHg
----[#fcc] reference range
-----_ age: integer
-----_ gender: code
 ---[#fcc] interpretation
 ----[#cff] DT: code
 -----_ critical low
@@ -122,17 +133,6 @@ end legend
 ----_ patient refused
 ----_ patient undergoes procedure
 
-++[#ff8] administrative
-+++[#fcc] identifier
-+++[#fcc] observedDateTime
-++++[#cff] DT: instant | dateTime | period
-+++[#fcc] recordedDateTime
-++++[#cff] DT: dateTime
-
-+++[#88f] involved persons
-++++[#88f] author
-++++[#88f] performer
-++++[#88f] recorder
 
 ++[#ff8] <img icon_modifier_extension_complex.png> context items
 +++[#88f] subject
@@ -162,6 +162,7 @@ end legend
 +++[#ff8] device
 ++++[#ff8] type
 ++++[#ff8] measuring
+++++[#ff8] serial number/UDI
 +++++_ automated
 +++++_ validated?
 +++++_ ...
@@ -212,6 +213,7 @@ end legend
 ++++_ intra-surgery
 ++++_ post-surgery
 ++++_ post-dose
+++++_ post-prendial
 ++++_ ...
 +++[#ff8] event
 ++++_ normal

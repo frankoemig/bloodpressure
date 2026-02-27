@@ -7,12 +7,11 @@ class "**[[StructureDefinition-BloodPressure.html Blood Pressure]]**" as bp {
     position: code
     method: code
     exertion: code|quantity
+    device: code
     cuffType: code
     cuffSize: code
     consciousness: code
     tilt: integer
-    cuffType: code
-    cuffSize: code
     dateTime: instant|period
     comment: string
 }

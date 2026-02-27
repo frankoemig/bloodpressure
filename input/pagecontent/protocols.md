@@ -74,4 +74,15 @@ Instead of providing all values, an average is calculated during special periods
 ![Long-term BP Measurement](long-term.png){:height="400px"}
 <br clear="all"/>  
 
+### Devices
 
+Different types of devices require different attributes (or properties).
+The correlation between type of device and attribute is shown in the following table:
+
+| Device | Cuff | Catheter |
+| --- | --- | --- |
+| Type | x |  |
+| Size | x |  |
+| Lumen |  | x |
+| serial number | x | x |
+| ... | 

@@ -31,6 +31,7 @@ Description: "This is the Logical Model for **Blood Pressure**"
     * low 0..1 integer "Low Range, if relevant"
     * high 0..1 integer "High Range, if relevant"
     * age 0..1 Range "Applicable age range, if relevant"
+    * gender 0..1 CodeableConcept "gender"
     * text 0..1 string "Text based reference range in an observation"
 
 * diastolicPressure 0..1 SU BackboneElement "diastolic blood pressure" "Minimum systemic arterial blood pressure - measured in the diastolic or relaxation phase of the heart cycle."
@@ -48,6 +49,7 @@ Description: "This is the Logical Model for **Blood Pressure**"
     * low 0..1 integer "Low Range, if relevant"
     * high 0..1 integer "High Range, if relevant"
     * age 0..1 Range "Applicable age range, if relevant"
+    * gender 0..1 CodeableConcept "gender"
     * text 0..1 string "Text based reference range in an observation"
 
 * meanArterialPressure 0..1 BackboneElement "mean arterial blood pressure" "The average arterial pressure that occurs over the entire course of the heart contraction and relaxation cycle."
@@ -65,6 +67,7 @@ Description: "This is the Logical Model for **Blood Pressure**"
     * low 0..1 integer "Low Range, if relevant"
     * high 0..1 integer "High Range, if relevant"
     * age 0..1 Range "Applicable age range, if relevant"
+    * gender 0..1 CodeableConcept "gender"
     * text 0..1 string "Text based reference range in an observation"
 
 * pulsePressure 0..1 BackboneElement "pulse blood pressure" "The difference between the systolic and diastolic pressure."
@@ -82,23 +85,24 @@ Description: "This is the Logical Model for **Blood Pressure**"
     * low 0..1 integer "Low Range, if relevant"
     * high 0..1 integer "High Range, if relevant"
     * age 0..1 Range "Applicable age range, if relevant"
+    * gender 0..1 CodeableConcept "gender"
     * text 0..1 string "Text based reference range in an observation"
 
 * interpretation 0..1 SU CodeableConcept "overall clinical meaning of the BP measurement"
 * interpretation from http://bloodpressure.oemig.de/fhir/ValueSet/Interpretation (required)
 
-* dataAbsentReason 0..1 CodeableConcept "Why the component result is missing"
-* dataAbsentReason from http://hl7.org/fhir/ValueSet/data-absent-reason (required)
+* observationDateTime[x] 0..1 SU date or instant or Period "date/time of observation" "different representations"
+* documentationDateTime[x] 0..1 SU date or instant or Period "date/time of documentation" "different representations"
 
-* range 0..* BackboneElement "reference range"
-
-* effective[x] 0..1 SU date or instant or Period "date of observation" "different representations"
-
-* cuffType 0..1 CodeableConcept "type of cuff used (eg. rusable, disposable)"
-* cuffType from http://bloodpressure.oemig.de/fhir/ValueSet/CuffType (required)
-
-* cuffSize 0..1 CodeableConcept "size of cuff (eg. adult, child)"
-* cuffSize from http://bloodpressure.oemig.de/fhir/ValueSet/CuffSize (required)
+* device 0..1 BackboneElement "device"
+  * serialNumber 0..1 identifier "serial number / UDI"
+  * cuff 0..1 BackboneElement "cuff"
+    * type 0..1 CodeableConcept "type of cuff used (eg. rusable, disposable)"
+    * type from http://bloodpressure.oemig.de/fhir/ValueSet/CuffType (required)
+    * size 0..1 CodeableConcept "size of cuff (eg. adult, child)"
+    * size from http://bloodpressure.oemig.de/fhir/ValueSet/CuffSize (required)
+  * catheter 0..1 BackboneElement "catheter"
+    * lumen 0..1 integer "lumen"
 
 * position 0..1 CodeableConcept "position for measurement"
 * position from http://bloodpressure.oemig.de/fhir/ValueSet/Position (required)
