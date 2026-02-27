@@ -21,7 +21,7 @@ is therefore just a serialization of the <a href="mindmap.html">mindmap</a>.</fo
 
 * administrativeInformation 0..1 BackboneElement "administrative information" "this element anchors all details that are needed as additional administrative information"
   * identifier 0..1 Identifier "identifier" "how to identify this observation"
-  * observedTime 0..1 instant "when observed"
+  * observedDateTime 0..1 instant "when observed"
   * recordedDateTime 0..1 instant "when entered into system"
   * device 0..1 string "device" "information about the device used to perform this observation"
     * serialNumber 0..1 Identifier "serial number / UDI"

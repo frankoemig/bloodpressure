@@ -152,6 +152,45 @@ Severity:    #error
 
 
 
+CodeSystem: DeviceTypeCS
+Id: DeviceType
+Title: "Device Type"
+Description: "**Device Type**"
+
+* ^url = "http://bloodpressure.oemig.de/fhir/CodeSystem/DeviceType"
+* ^version = "0.1.0"
+
+* insert HeaderDetailRules
+
+* ^caseSensitive = false
+* ^valueSet = "http://bloodpressure.oemig.de/fhir/ValueSet/DeviceType"
+* ^hierarchyMeaning = #is-a
+* ^compositional = false
+* ^versionNeeded = false
+* ^content = #complete
+
+* #cuff "cuff"
+  * #adultCuff "cuff for adults"
+  * #childCuff "cuff for children/babies"
+* #catheter "catheter"
+  * #dwellingCatheter "dwelling catheter"
+
+
+ValueSet: DeviceTypeVS
+Id: DeviceType
+Title: "Device Type"
+Description: "**Device Type**"
+
+* ^url = "http://bloodpressure.oemig.de/fhir/ValueSet/DeviceType"
+* ^version = "0.1.0"
+
+* insert HeaderDetailRules
+
+* include codes from system http://bloodpressure.oemig.de/fhir/CodeSystem/DeviceType
+
+
+
+
 
 CodeSystem: CuffTypeCS
 Id: CuffType
