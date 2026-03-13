@@ -61,8 +61,8 @@ All that may result in aka overview model:
 
 ### Spot vs. calculated Measurements 
 
-A total different dimension within the hierarchy shown above is a spot measurements - in contrast
-to calculated values (like min, max, or average) over time.
+A total different dimension within the hierarchy shown above is a spot measurement in contrast
+to calculated values (like min, max, mean or average) over time.
 Then in principle different individual measurements are performed.
 They can be used and calculated into a single value optionally including
 the used measurements:
@@ -78,11 +78,16 @@ Possible functions:
 
 * min
 * average
+* mean
 * max 
 
-**Quwstions**: More functions? Are there different ways to calculate an average?
+**Questions**: More functions? Which ones?
 
-### Calculation
+#### Spot Measurement
+
+tbd
+
+#### Calculation
 
 Another dimension is when measurements are calculated from others:
 The pulse pressure is the result of a calculation of systolic and diastolic values.
@@ -95,6 +100,9 @@ An average value is the calculation of a set of spot measurements:
 The formula for calculation can be part of the data.
 
 The integrated value takes a set of individual measurements and calculates aka integration across all values.
+
+* **pulse pressure** is calculated by taking the difference between systolic and disatolic values. 
+
 
 ### Dimensions
 

@@ -43,7 +43,7 @@ An executable protocol typically should specify a sequence of measurements that 
 | Naughton | treadmill protocol | gently increase work by limiting each stage increase to approximately one metabolic equivalent (3.5 ml/kg/min VO 2 ) |
 | [NHANES](https://wwwn.cdc.gov/nchs/data/nhanes/public/2021/manuals/2021-BloodPressureProcedures-508.pdf) | *National Health and Nutrititon Examination Survey* | |
 | orthostatic | | supine -> sitting -> standing | varying body position to examine what happens if patient stands up; difference is calculated |
-| 24h long-term | | sequence of observations during 24 hours | measured all 15 minutes for 24 hours, at arm, arbitrary exertion, activity unclear |
+| ABPM | anbulatory BP monotirong | a 24-hour, non-invasive, wearable device that records blood pressure (BP) at regular intervals (every 20-30 minutes) during daily activity and sleep | measured all 15 minutes for 24 hours, at arm, arbitrary exertion, activity unclear |
 | SPRINT | *Systolic (Blood) Pressure Intervention Trial* |  clinical trial that found that treating high blood pressure (hypertension) to a lower goal of less than 120 mm Hg significantly reduced the risk of cardiovascular events and death compared to standard treatment (less than 140 mm Hg) in high-risk patients |
 | tilt | | sequence of measurements with increasing tilt | tilt angle |
 | .. | .. |

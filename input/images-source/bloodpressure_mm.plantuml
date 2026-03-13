@@ -75,6 +75,7 @@ end legend
 ---[#fcc] calculating function
 ----[#fcc] min
 ----[#fcc] average
+----[#fcc] mean
 ----[#fcc] max
 ----[#fcc] long-term
 -----[#fcc] start/end
@@ -93,6 +94,11 @@ end legend
 -----_ during
 -----_ after
 ----[#fcc] anaesthetica
+---[#cfc] <img icon_modifier_extension_complex.png> body weight
+----_ relevant for a correct interpretation
+---[#cfc] <img icon_modifier_extension_complex.png> pulse
+----[#cff] PQ
+----[#cff] Reference
 ---[#cfc] <img icon_modifier_extension_complex.png> current/former exercise assocation
 ----[#cff] DT: code
 -----_ sleeping
@@ -116,11 +122,6 @@ end legend
 -----_ pre
 -----_ during
 -----_ post
----[#cfc] <img icon_modifier_extension_complex.png> body weight
-----_ relevant for a correct interpretation
----[#cfc] <img icon_modifier_extension_complex.png> pulse
-----[#cff] PQ
-----[#cff] Reference
 ---[#cfc] <img icon_modifier_extension_complex.png> exertion/activity
 ----[#cfc] status
 ----- in rest, sitting, sleeping
@@ -161,10 +162,12 @@ end legend
 +++++_ catheter
 +++[#ff8] device
 ++++[#ff8] type
-++++[#ff8] measuring
-++++[#ff8] serial number/UDI
++++++[#ff8] <img icon_page_n_i.gif> cuff type
 +++++_ automated
 +++++_ validated?
+++++[#cff] DT: code
+++++[#ff8] measuring
+++++[#ff8] serial number/UDI
 +++++_ ...
 +++[#cfc] exertion \n(see lower left corner)
 
@@ -205,7 +208,7 @@ end legend
 +++[#ff8] tilt (degree)
 ++++[#cff] DT: integer
 ++++[#cff] DT: code
-+++[#ff8] aspiration
++++[#ff8] respiration
 ++++_ expiration
 ++++_ inspiration
 +++[#ff8] associated situation
@@ -220,8 +223,6 @@ end legend
 ++++_ stressed by someone/thing
 +++++_ physician
 +++++_ bear/tiger/snake
-+++[#ff8] <img icon_page_n_i.gif> cuff type
-++++[#cff] DT: code
 +++[#ff8] consciousness
 ++++[#cff] DT: code
 +++++_ awake

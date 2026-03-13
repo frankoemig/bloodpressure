@@ -4,12 +4,10 @@ class "**[[StructureDefinition-BloodPressure.html Blood Pressure]]**" as bp {
     identifier
     interpretation: code
     location: code
-    position: code
+    positionOfBody: code
+    positionOfArm: code
     method: code
     exertion: code|quantity
-    device: code
-    cuffType: code
-    cuffSize: code
     consciousness: code
     tilt: integer
     dateTime: instant|period
@@ -33,13 +31,26 @@ package "Measurement" {
 
 class "**Systolic BP**" as syst
 class "**Diastolic BP**" as diast
-class "Pulse Pressure" as pbp
 
-package "Calculation" as calc {
-    class "Mean Arterial Pressure" as mabp
-    class "Long-Term BP" as lt
+class "Device" as dev {
+    type: code
+    cuffType: code
+    cuffSize: code
+    serialNumber: string|UDI
 }
 
+package "Calculation (1 value)" as calc1 {
+    class "Pulse Pressure" as pbp
+    class "Mean Arterial Pressure" as mabp
+}
+
+package "Calculation (2 values)" as calc2 {
+    class "Ambulatory BP" as ambbp
+    class "Average"
+    class "Mean"
+    class "Min"
+    class "Max"
+}
 
 package "Other Relevant Concepts" {
     class "Body Weight" as bw #cfc
@@ -49,15 +60,18 @@ package "Other Relevant Concepts" {
     the measurement
     end Note
     class "Medication" as med #cfc
+    class "Exertion" as exer #cfc
 
 }
 
 
 package "Participation" {
-    abstract class "Role" as rol #88f 
+    abstract class "Role" as rol #88f {
+        type: code
+    }
     class "Author" as a #88f
     class "Performer" as p #88f
-    Note left of p
+    Note right of p
     normally a physician,
     but could also
     be the patient
@@ -67,6 +81,8 @@ package "Participation" {
     class "Person" as pers #88f {
         identifier
         name
+        gender
+        dob
     }
     rol "0..*" -left- "1" pers
 
@@ -85,20 +101,22 @@ package "Participation" {
 
 bpv <|-up- syst
 bpv <|-up- diast
-bpv <|-up- mabp
-bpv <|-up- pbp
-bpv "1" *-left- "1" rr
+bpv <|-down- mabp
+bpv <|-down- pbp
+bpv "1" *-right- "1" rr
 
-bp -right- "0..1" a
-bp -right- "0..1" p
-bp -right- "0..1" r
-bp -left- "1" s
+bp <|-right- ambbp
+
+bp -up- "0..1" a
+bp -up- "0..1" p
+bp -up- "0..1" r
+bp -up- "1" s
 bp -- bw
+bp -right- "0..1" exer
 bp -right- "0..*" med
+bp "1" -left- "1" dev
 
 bp *-- "1" syst
 bp *-- "0..1" diast
-bp *-- mabp
-bp *-- pbp
 
 @enduml

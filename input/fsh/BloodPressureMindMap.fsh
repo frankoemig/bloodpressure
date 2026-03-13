@@ -47,12 +47,18 @@ is therefore just a serialization of the <a href="mindmap.html">mindmap</a>.</fo
   * unit 0..1 CodeableConcept "unit of measurement" "it is assumed that all measured details are using the same units"
   * interpretation 0..1 CodeableConcept "interpretation"
 * calculatedValue 0..1 BackboneElement "some values are calculated from (different) measurements" 
-  * meanArterialPressure 0..1 string "mean arterial pressure" "calculation by integrating a set of individual measurements"
+  * meanArterialPressure 0..1 string "mean arterial pressure (MAP)" 
+  "calculation by integrating a set of individual measurements:
+  MAP = diastolic + 1/3*(systolic - diastolic)
+  or
+  MAP = (systolic + 2*distolic) / 3
+  "
   * pulsePressure 0..1 string "pulse pressure"
   * calculation 0..*  BackboneElement "different functions for calculating BP values"
     * minimum 0..1 string "minimum across all values"
     * maximum 0..1 string "maximum across all values"
-    * average 0..1 string "average across all values"
+    * average 0..1 string "average across a set of measurements"
+    * mean 0..1 string "average across a set of continuous measurements"
     * longTerm 0..* string "average values for specific periods (eg night)"
 * contextItem 0..1 BackboneElement "context item" "context relevant details"
   * subject 0..1  BackboneElement "who is the subject of this observation. Normally, it is the patient"
