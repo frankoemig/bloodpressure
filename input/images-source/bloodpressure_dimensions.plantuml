@@ -8,8 +8,17 @@ title Blood Pressure Dimensions
 
 ++ Invasive vs. Non-invasive
 ++ Measured vs. Calculated
-++ Spot vs. Average
-++ Level of current or former physical Exertion
-++ Performer (patient vs. physician)
++++_ Spot
++++_ Average
+++ Context Setting
++++_ definition of certain parameters
+++ executing Protocols
++++_ sequence of specific measurements
+++ Interpretation Dependency
++++_ Medication
++++_ Level of current or former physical Exertion
+++ Performer
++++_ Patient: self-measurements
++++_ Physician: "professional" meeasurements
 
 @endmindmap

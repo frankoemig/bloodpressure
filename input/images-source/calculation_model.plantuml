@@ -19,26 +19,24 @@ abstract class "Reference Range" as range {
 value "1" *-right- "1" range :  "             "
 
 package "measured" as measured {
+    class "Systolic" as syst {
+    }
 
-
-class "Systolic" as syst {
+    class "Diastolic" as diast {
+    }
 }
 
-class "Diastolic" as diast {
-}
-}
-
-package "calculated" as calc {
-
+package "calculated (1 value)" as calc1 {
     class "Pulse Pressure" as pulse {
         formula
     }
-
 }
 
-package "calculated" as calc2 {
+package "calculated (2 values)" as calc2 {
     class "Average" as avg
     class "Mean" as mean2
+    class "Min" as min
+    class "Max" as max
 }
 
 package "finding: integrated result" as integrated {
@@ -50,7 +48,7 @@ class "Mean Arterial Pressure" as mean {
 
 }
 
-bp *-down- "1..2" value : systolic + diastolic
+bp "1" *-down- "1..2" value : systolic + diastolic
 
 syst "0..1" -- pulse
 diast "0..1" -- pulse

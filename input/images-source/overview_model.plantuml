@@ -1,6 +1,6 @@
 @startuml
 
-skinparam svgDimensionStyle false
+'skinparam svgDimensionStyle false
 
 abstract class "Blood Pressure" as abp  {
     identifier
@@ -8,7 +8,6 @@ abstract class "Blood Pressure" as abp  {
     description
     interpretation
     method
-    device
     location
     position
     tilt
@@ -18,6 +17,12 @@ abstract class "Blood Pressure" as abp  {
     cuffSize
     comment
 }
+
+class "Device" as dev {
+    type
+}
+
+abp -right- dev
 
 class "Calculated BP" as cbp {
     function
@@ -29,11 +34,16 @@ abstract class "Protocol" as prot {
     name
     description
 }
-abstract class "Performer" as perf #88f
+
+class "Person" as pers #88f
+
+abstract class "Role" as role #88f
+
+class "Performer" as perf #88f
 class "Recorder" as rec #88f
 
 class "Patient" as pat #88f
-class "Practitioner" as prac #88f
+class "Author" as author #88f
 
 abstract class "BP Value" as val {
     value
@@ -60,9 +70,12 @@ prot o-- "1..*" mbp : measures >
 perf .. abp : performs >
 perf .. prot : performs >
 
-perf <|-- pat
-perf <|-- prac
-perf <|-- rec
+role -right- pers
+
+role <|-- perf
+role <|-- pat
+role <|-- author
+role <|-- rec
 
 abstract class "Medication" as med #cfc
 class "BP relevant Medication" as bpmed #cfc

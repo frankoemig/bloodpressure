@@ -77,19 +77,40 @@ Or alternatively, only average measurements over a very short period of time, i.
 Possible functions:
 
 * min
+* max 
 * average
 * mean
-* max 
 
 **Questions**: More functions? Which ones?
 
-#### Spot Measurement
+#### Spot (point-in-time) Blood Pressure
 
-tbd
+A spot measurement or point in time measurement of a blood pressure is a single measurement, 
+done either manually by an individual or automatically by a device, 
+wherein the measurement is recorded at a specific date and time.  
+It is understood that many devices take successive rapid (within a second) measurements 
+and report/record only the average of these rapid measurements.  
+In these cases the reported measurement is still considered to be a spot measurement.
 
-#### Calculation
+#### Calculated Measurements
 
-Another dimension is when measurements are calculated from others:
+There are items that are often reported with a blood pressure measurement that are not directly measured. 
+These include Mean Arterial Pressure and Pulse Pressure. 
+These are calculated using the values of both the Systolic and Diastolic pressures and 
+are reported/recorded using the same date and time as the spot measurement.
+
+#### Average Blood Pressure
+
+Average Blood Pressure and Mean Arterial Pressure are often confused with one another due to 
+the mathematical definitions of the words “mean” and “average”.  For the purposes of blood pressure, 
+an **average** is a mathematical average of several spot measurements. 
+For example, a 24 hour Average Blood pressure is the average of many spot measurements within a 24 hour period. 
+There are many types of blood pressure averages: weekly morning averaged, weekly evening averages, 
+24 hour, 8 hour, 4 hour averages, and more.
+
+#### Class Diagram
+
+The following class diagram shall explain how the different spot and calculated values refer to each other:
 The pulse pressure is the result of a calculation of systolic and diastolic values.
 An average value is the calculation of a set of spot measurements:
 
@@ -102,7 +123,7 @@ The formula for calculation can be part of the data.
 The integrated value takes a set of individual measurements and calculates aka integration across all values.
 
 * **pulse pressure** is calculated by taking the difference between systolic and disatolic values. 
-
+* A **Mean Arterial** Pressure is the calculated arterial pressure during a single spot measurement.
 
 ### Dimensions
 
