@@ -1,0 +1,85 @@
+@startuml
+
+title "Representation in FHIR: ITS"
+
+package "Patient Resource" {
+    class "Patient" as pat {
+        identifier
+        name
+        gender
+        dob
+    }
+
+}
+
+package "Observation Resource" {
+    class "MainObservationData" as obs {
+        identifier
+        status
+        category
+        code
+        effectiveDateTime
+        note
+        bodySite
+        method
+    }
+
+    class "Component: systolic" as syst {
+        code
+        value
+        dataAbsentReason
+        interpretation
+        referenceRange
+    }
+
+    class "Component: diastolic" as diast {
+        code
+        value
+        dataAbsentReason
+        interpretation
+        referenceRange
+    }
+
+    obs *.. "0..1" syst
+    obs *.. "0..1" diast
+}
+
+package "PractitionerRole Resource" {
+    class "PractitionerRole" as role {
+        identifier
+        active
+        code
+        period
+        name
+    }
+
+}
+
+package "Practitioner Resource" {
+    class "Practitioner" as pract {
+        identifier
+        name
+    }
+
+}
+
+package "Resource Device" {
+    class "Device" as dev {
+        identifier
+        displayName
+        status
+        name[]
+        modelNumber
+        serialNumber
+        category
+        type
+    }
+}
+
+obs -left-> "0..1" pat : subject
+obs -right-> "0..*" role : performer
+obs --> dev
+
+role "1" -right-> "0..1" pract
+
+@enduml

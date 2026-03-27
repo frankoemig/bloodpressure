@@ -1,0 +1,48 @@
+@startyaml
+
+title "Representation in v2x: ITS"
+
+segment: v2 message
+1:
+  field: PID
+  3: identifier
+  5: name
+  7: date of birth
+  8: gender
+2:
+  field: OBX
+  1: seq no (=1)
+  2: value type
+  3: code for blood pressure
+  8: interpretation code
+  14: date/time of observation
+3:
+  field: PRT
+  _: involved physician
+4:
+  field: OBX (systolic)
+  1: seq no (=2)
+  2: value type (= NM)
+  3: code for systolic blood pressure value
+  5: value
+  6: unit
+  7: reference range
+  8: interpretation code
+5:
+  field: OBX (diastolic)
+  1: seq no (=3)
+  2: value type (NM)
+  3: code for distolic blood pressure value
+  5: value
+  6: unit
+  7: reference range
+  8: interpretation code
+6:
+  field: OBX (exertion)
+  1: seq no (=4)
+  2: value type (NM)
+  3: code for exertion
+  5: value
+  6: unit
+
+@endyaml
