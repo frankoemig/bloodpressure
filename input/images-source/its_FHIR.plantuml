@@ -12,7 +12,7 @@ package "Patient Resource" {
 
 }
 
-package "Observation Resource" {
+package "Observation Resource: BP" #dfd {
     class "MainObservationData" as obs {
         identifier
         status
@@ -44,15 +44,65 @@ package "Observation Resource" {
     obs *.. "0..1" diast
 }
 
+package "Observation Resource: Exertion" #bfb {
+    class "MainObservationData" as ex {
+        identifier
+        status
+        category
+        code
+        value
+        interpretation
+        effectiveDateTime
+        note
+    }
+}
+
+package "Observation Resource: Body Weight" #bfb {
+    class "MainObservationData" as bw {
+        identifier
+        status
+        category
+        code
+        value
+        interpretation
+        effectiveDateTime
+        note
+    }
+}
+
+package "MedicationStatement" {
+    class "MedicationStatement" as medstat {
+        identifier
+        status
+        category
+        effectiveDateTime
+    }
+}
+
+package "Medication" {
+    class "Medication" as med {
+        identifier
+        code
+        status
+        doseForm
+    }
+
+    class "Ingredient" as ing {
+        item
+        isActive
+        strength
+    }
+
+    med .left.> ing : ingredient
+}
+
 package "PractitionerRole Resource" {
     class "PractitionerRole" as role {
         identifier
         active
         code
         period
-        name
     }
-
 }
 
 package "Practitioner Resource" {
@@ -76,9 +126,21 @@ package "Resource Device" {
     }
 }
 
-obs -left-> "0..1" pat : subject
-obs -right-> "0..*" role : performer
+diamond xy
+
+
+obs -up-> "0..1" pat : subject
+obs -right-> xy
+xy -up-> "0..*" pat : performer (self)
+xy -right-> "0..*" role : performer (professional)
 obs --> dev
+
+ex -left-> "0..1" pat : subject
+
+medstat -down-> "0..1" pat : subject
+medstat -right-> med : medication
+
+bw ---> pat : subject
 
 role "1" -right-> "0..1" pract
 

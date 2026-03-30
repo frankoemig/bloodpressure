@@ -53,7 +53,11 @@ open details:
 
 ### CDA
 
-tbd
+> tbd: the drawing is just the first draft!!!!
+
+<div width="500px">
+{% include its_CDA.svg %}
+</div>
 
 
 ## Binding to terminologies

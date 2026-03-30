@@ -9,8 +9,8 @@ name: Blood-Pressure-Information-Model-IG
 title: Blood Pressure Cross-Country Cross-Language Cross-Paradigm (Demo) IG
 description: Cross-Country, cross-paradigm Demo-Implementation Guide for Blood Pressure Measurements
 status: draft # draft | active | retired | unknown
-version: 0.6.0
-date: 2026-03-27
+version: 0.6.1
+date: 2026-03-30
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2026+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -54,6 +54,8 @@ pages:
     title: Mindmap
   model.md:
     title: Information Models
+  profiles.md:
+    title: Profiles
   hierarchy.md:
     title: Hierarchy of Profiles
   process.md:
@@ -110,6 +112,7 @@ menu:
     1. Mindmap: mindmap.html
     2. Information Models: model.html
     3. ITS: its.html
+    4. Profiles: profiles.html
   Content:
     Definitions: content.html
     Executable Protocols: protocols.html

@@ -1,0 +1,191 @@
+@startuml
+
+title "Representation in CDA: ITS (Draft!)"
+
+class "Patient" as pat #bfb {
+    classCode = PSN
+    determinerCode = INST
+    id
+    name
+    gender
+    birthTime
+}
+
+class "Observation: Blood Pressure" as obs #fbb {
+    id
+    status
+    category
+    code
+    effectiveDateTime
+    note
+    bodySite
+    method
+}
+
+class "Observation: systolic" as syst #fbb {
+    code
+    value
+    dataAbsentReason
+    interpretation
+    referenceRange
+}
+
+class "Observation: diastolic" as diast #fbb {
+    code
+    value
+    dataAbsentReason
+    interpretation
+    referenceRange
+}
+
+class "hasComponent" as comp1 #f99 {
+    typeCode = COMP
+}
+class "hasComponent" as comp2 #f99 {
+    typeCod = COMP
+}
+
+obs --> comp1
+obs --> comp2
+comp1 --> "0..1" syst
+comp2 --> "0..1" diast
+
+class "Observation: Exertion" as ex #fbb {
+    classCode
+    id
+    status
+    category
+    code
+    value
+    interpretation
+    effectiveDateTime
+    note
+}
+
+class "Observation: Body Weight" as bw #fbb {
+    classCode
+    id
+    status
+    category
+    code
+    value
+    interpretation
+    effectiveDateTime
+    note
+}
+
+class "SubstanceAdministration" as substadm #fbb {
+    id
+    status
+    category
+    effectiveDateTime
+}
+
+class "Participation" as part0 #8af {
+    typeCode = PAT
+}
+class "Participation" as part1 #8af {
+    typeCode
+}
+class "Participation" as part2 #8af {
+    typeCode
+}
+class "Participation" as part3 #8af {
+    typeCode = SUBJ
+}
+class "Participation" as part4 #8af {
+    typeCode = SUBST
+}
+class "Participation" as part5 #8af {
+    typeCode = SUBJ
+}
+class "Participation" as part6 #8af {
+    typeCode = SUBJ
+}
+
+class "PatientRole" as role0 #ffb {
+    classCode = PAT
+}
+
+class "PerformerRole" as role1 #ffb {
+    typeCode = PERF
+    id
+    status = active
+    code
+    period
+}
+
+class "DeviceRole" as role2 #ffb {
+}
+
+class "PatientRole" as role3 #ffb {
+    classCode = PAT
+}
+
+class "SubstanceRole" as role4 #ffb {
+    classCode = PAT
+}
+
+class "PatientRole" as role5 #ffb {
+    classCode = PAT
+}
+class "PatientRole" as role6 #ffb {
+    classCode = PAT
+}
+
+class "Practitioner" as pract #bfb {
+    classCode = PRACT
+    id
+    name
+}
+
+class "Material" as mat #bfb {
+    classCode = MAT
+    determinerCode = INST
+    id
+    code
+}
+class "Device" as dev #bfb {
+    identifier
+    displayName
+    status
+    name[]
+    modelNumber
+    serialNumber
+    category
+    type
+}
+
+diamond xy
+
+
+obs -up-> "0..1" part0 : subject
+part0 -up-> "0..1" role0 : subject
+role0 -up-> "0..1" pat : subject
+obs -right-> part1
+part1 --> role1
+role1 -right-> xy : perform
+xy -up-> "0..*" pat : performer (self)
+
+obs --> "0..1" part2
+part2 --> role2
+role2 -right-> dev
+
+xy "1" -right-> "0..1" pract
+
+substadm --> part3
+substadm --> part4
+part3 --> role3
+part4 --> role4
+role3 --> pat
+role4 --> mat
+
+bw --> part5
+part5 --> role5
+role5 --> pat
+
+ex --> "0..1" part6 : subject
+part6 --> role6
+role6 --> pat
+
+@enduml
