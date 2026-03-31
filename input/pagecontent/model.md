@@ -177,6 +177,15 @@ An important aspect is the interpretation of values that depends on certain cont
 * A wrong cuff size may lead to wrong measurements.
 * ...
 
+#### Medication
+
+The medication can be classified into four categories:
+
+* anti-hypertensive
+* vaso-active
+* raise blood pressure
+* no effect on blood pressure
+
 ### Equivalence of Models
 
 An important question is to identify different way to represent the same concept.
