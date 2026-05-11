@@ -33,7 +33,7 @@ open details:
 ### v2.x/v2+
 
 **v2x/v2+** is a line oriented and delimitered format that could be best represented in form of tables
-showing the fields for each line/row:
+showing the fields for each line/row. The leftmost table operates as the whole message structure:
 
 <div width="500px">
 {% include its_v2.svg %}
@@ -51,16 +51,29 @@ open details:
 * device
 * ...
 
+### Model in Version 3.0
+
+> tbd: the drawing is just the first draft!!!!
+
+The drawing collects all details and arranges them as a domain message information model (D-MIM):
+
+<div width="500px">
+{% include its_v3.svg %}
+</div>
+
 ### CDA
 
 > tbd: the drawing is just the first draft!!!!
+
+The following drawing shows the surroundings from a document perspective.
+The D-MIM has to be included replacing the 
 
 <div width="500px">
 {% include its_CDA.svg %}
 </div>
 
-
 ## Binding to terminologies
 
 The terminology needed should be identical for each ITS because an ITS does not make any assumption about codes.
+It should be sufficien to hook them in.
 
