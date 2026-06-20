@@ -10,7 +10,8 @@ class "**[[StructureDefinition-BloodPressure.html Blood Pressure]]**" as bp {
     exertion: code|quantity
     consciousness: code
     tilt: integer
-    dateTime: instant|period
+    recordedDateTime: instant
+    performedDateTime: instant|period
     comment: string
 }
 
@@ -32,36 +33,73 @@ package "Measurement" {
 class "**Systolic BP**" as syst
 class "**Diastolic BP**" as diast
 
-class "Device" as dev {
+abstract class "Device" as dev {
     type: code
-    cuffType: code
-    cuffSize: code
+    automated: boolean
     serialNumber: string|UDI
 }
+
+class "Cuff" as cuff {
+    cuffType: code
+    cuffSize: code
+}
+
+class "Catheter" as catheter {
+    lumen: integer
+}
+
+dev <|-up- cuff
+dev <|-up- catheter
 
 package "Calculation (1 value)" as calc1 {
     class "Pulse Pressure" as pbp
     class "Mean Arterial Pressure" as mabp
 }
 
+mabp o.up. "0..1" syst
+mabp o.up. "0..1" diast
+pbp o.up. "0..1" syst
+pbp o.up. "0..1" diast
+
 package "Calculation (2 values)" as calc2 {
-    class "Ambulatory BP" as ambbp
+    abstract class "Culculation" as calcfct {
+        count: integer
+        start: instant
+        end: instant
+    }
+    class "Ambulatory BP" as ambbp {
+        duration: 24h
+        interval: 10/15/20min
+    }
+    Note bottom of ambbp
+    tracks automatically over a 24-hour period
+    while subject goes about normal daily activities 
+    and sleep
+    end Note
     class "Average"
-    class "Mean"
     class "Min"
     class "Max"
+
+    calcfct <|-- ambbp
+    calcfct <|-- "Average"
+    calcfct <|-right- "Min"
+    calcfct <|-left- "Max"
+    ambbp o.right. "Average"
+    Note on link 
+    several averages
+    for certain time periods
+    end Note
 }
 
-package "Other Relevant Concepts" {
+calcfct o.. "0..*" bp
+
+package "Other Relevant Concepts" as orc {
     class "Body Weight" as bw #cfc
-    Note right of bw
-    necessary to
-    interpret
-    the measurement
-    end Note
     class "Medication" as med #cfc
     class "Exertion" as exer #cfc
+    class "Pulse" as pulse #cfc
 
+    Note "neccessary to \ninterpret \nthe measurement" as N1
 }
 
 
@@ -84,18 +122,24 @@ package "Participation" {
         gender
         dob
     }
-    rol "0..*" -left- "1" pers
+    rol "0..*" -up- "0..1" pers
+    rol "0..*" -- "0..1" dev
 
     class "Subject" as s #88f
     Note left of s
     normally
     the patient
+    itself
     end Note
+
+    s ... orc
 
     rol <|-- a
     rol <|-- p
     rol <|-- r
     rol <|-- s
+
+    Note "some roles can either be played \nby a person or a device, \nbut the subject should be a person" as N2
 }
 
 
@@ -111,9 +155,10 @@ bp -up- "0..1" a
 bp -up- "0..1" p
 bp -up- "0..1" r
 bp -up- "1" s
-bp -- bw
+bp -- "0..1" bw
 bp -right- "0..1" exer
 bp -right- "0..*" med
+bp -right- "0..1" pulse
 bp "1" -left- "1" dev
 
 bp *-- "1" syst

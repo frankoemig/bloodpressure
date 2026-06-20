@@ -50,14 +50,6 @@ In most use cases, probably 99%, only non-invasive measurements obtained during 
 is considered or of interest resp. in scope. Nevertheless, when talking about blood pressure the
 remaining 1% must be considered as well.
 
-### Overview Model
-
-All that may result in aka overview model:
-
-<div width="500px">
-{% include overview_model.svg %}
-</div>
-
 
 ### Spot vs. calculated Measurements 
 
@@ -122,8 +114,16 @@ The formula for calculation can be part of the data.
 
 The integrated value takes a set of individual measurements and calculates aka integration across all values.
 
-* **pulse pressure** is calculated by taking the difference between systolic and disatolic values. 
-* A **Mean Arterial** Pressure is the calculated arterial pressure during a single spot measurement.
+##### Pulse Pressure
+
+Pulse pressure is calculated by taking the difference between systolic and diastolic values. 
+
+##### Mean Arterial Pressure
+
+The Mean Arterial Pressure is the calculated arterial pressure during a single spot measurement.
+The calculation is normally done as:
+
+> mabp = (2 * diastolic + systolic) / 3
 
 ### Dimensions
 
@@ -150,18 +150,6 @@ For vital signs the following **subdimensions** seem to be in scope:
 
 **Consequence**: If this assertion is correct, then the vital signs guide should select the appropriate profile
 including the corresponding value sets by reference.
-
-### Do we need a "magic code"?
-
-As indicated already, it would be good to have a single generic code, that allows to identify 
-all observations that are blood pressure measurements.
-However, that should not falsify the description of the observation itself.
-Within "FHIR US Core r4" profiles, this is indicated by a so-called "magic Code".
-There is no doubt that such a code is necessary in order to identify all observations in question
-with a single and simple query. 
-
-**Question**: Would it make sense that this code can be specialized (as an ontology?) 
-to identify the subdimension in scope?
 
 ### Interpretation of Measurements
 

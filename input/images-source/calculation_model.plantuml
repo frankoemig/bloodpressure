@@ -34,9 +34,9 @@ package "calculated (1 value)" as calc1 {
 
 package "calculated (2 values)" as calc2 {
     class "Average" as avg
-    class "Mean" as mean2
     class "Min" as min
     class "Max" as max
+    class "Ambulatory" as ambp
 }
 
 package "finding: integrated result" as integrated {

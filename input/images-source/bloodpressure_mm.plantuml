@@ -75,9 +75,8 @@ end legend
 ---[#fcc] calculating function
 ----[#fcc] min
 ----[#fcc] average
-----[#fcc] mean
 ----[#fcc] max
-----[#fcc] long-term
+----[#fcc] ambulatory/long-term
 -----[#fcc] start/end
 ------[#cff] DT: timestamp
 -----[#fcc] value
@@ -88,6 +87,8 @@ end legend
 ----_ influences the results \nof the measurement
 ----[#cff] boolean
 ----[#fcc] MedicationAdministration
+-----[#cfc] relevant
+-----[#cfc] irrelevant
 ---[#cfc] <img icon_modifier_extension_complex.png> anaesthesia
 ----[#cff] DT: code
 -----_ before
@@ -99,9 +100,10 @@ end legend
 ---[#cfc] <img icon_modifier_extension_complex.png> pulse
 ----[#cff] PQ
 ----[#cff] Reference
----[#cfc] <img icon_modifier_extension_complex.png> current/former exercise assocation
+---[#cfc] <img icon_modifier_extension_complex.png> current/former \nexercise/activity assocation
 ----[#cff] DT: code
 -----_ sleeping
+-----_ in rest
 -----_ sitting
 -----_ walking
 ------_ slow
@@ -122,9 +124,8 @@ end legend
 -----_ pre
 -----_ during
 -----_ post
----[#cfc] <img icon_modifier_extension_complex.png> exertion/activity
-----[#cfc] status
------ in rest, sitting, sleeping
+----[#cfc] timing offset
+-----[#cff] DT: PQ
 ----[#cfc] level/type/intensity
 ----- Energy Consumption (Activity)
 ----- Energy Consumption (Nutrition)
@@ -161,10 +162,13 @@ end legend
 +++++_ automated cuff
 +++++_ catheter
 +++[#ff8] device
+++++_ manual/automated
+++++_ validated?
 ++++[#ff8] type
-+++++[#ff8] <img icon_page_n_i.gif> cuff type
-+++++_ automated
-+++++_ validated?
++++++[#ff8] <img icon_page_n_i.gif> cuff
+++++++_ size
++++++[#ff8] <img icon_page_n_i.gif> catheter
+++++++_ lumen
 ++++[#cff] DT: code
 ++++[#ff8] measuring
 ++++[#ff8] serial number/UDI
@@ -236,7 +240,7 @@ end legend
 
 ++[#ff8] <img icon_page_n_i.gif> executable protocol
 +++ orthostatic: supine -> sitting -> standing
-+++ tilt: position + tilt
++++ tilt: position + (increasing) tilt
 +++ ABI
 +++ SPRINT
 +++ NHANES 

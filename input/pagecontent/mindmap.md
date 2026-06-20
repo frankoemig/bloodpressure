@@ -17,7 +17,7 @@ The mindmap tries to arrange them in a way that helps to understand the semantic
 For the moment, additional explanatory text has not been duplicated from other sources for copyright and IP reasons.
 It can be expected, that this will be done later on.
 
-It is intended to add the documentation in the logical model associated with this mindmap.
+It is intended to add the documentation in the [logical model](StructureDefinition-BloodPressureMindMap.html) associated with this mindmap.
 But please recognize that the LM is no replacement for an information model 
 that will be derived from the mindmap.
 

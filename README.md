@@ -5,7 +5,7 @@ This is a Demo IG for **blood pressure measurements** facilitating the **cross-p
 This guide tries to document a different approach in writing implementation guides. 
 It starts with a **mindmap** to collect necessary details, continues with an **information model**
 (not to be confounded with a logical model)
-to document the relationship between different items, and derives **technical representations**
+to document the relationship between different items, and derives **technical representations** (aka ITS)
 that are then transfered into different data exchange standards like FHIR, CDA and v2.x.
 
 Rationale: The currently existing and therefore examined guides being used as input are all incomplete 
@@ -20,5 +20,19 @@ defines default values for certain contexts, or limits the value sets.
 Caveat: Of course, the details of the examples are in parts incomplete and most probably not quite accurate.
 However, the way forward should be documented and discussed.
 
+Approach:
+
+1. Mindmap (as drawing and logial model)
+2. Information Model
+3. Profiles on the Model for specific usages
+4. Value Set Collection
+5. technology binding
+  1. v2
+  2. V3/CDA
+  3. FHIR
+6. profiles on specific ITS
+
+Caveat: FHIR Logical Models are used for documentation purposes. This is NOT equivalent to FHIR profiling.
+
 For the content, it is continously undergoing improvements and corrections so that regular visits 
-are recommended.
+on the generated IG (https://build.fhir.org/ig/frankoemig/bloodpressure) are recommended.
