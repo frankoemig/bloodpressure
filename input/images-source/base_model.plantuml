@@ -1,5 +1,7 @@
 @startuml
 
+skinparam svgDimensionStyle false
+
 class "**[[StructureDefinition-BloodPressure.html Blood Pressure]]**" as bp {
     identifier
     interpretation: code

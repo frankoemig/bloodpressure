@@ -21,6 +21,26 @@ This page shall operate as a starting point to collect the value sets:
   * exertion
     * with
 	* without
+  * position
+    * sitting
+	* standing
+	* lying
+	* ..
   * medication
+    * with
+	* without
   * calculation
   * ..
+
+### Construction of Value Sets
+
+We need to define how we can do that:
+
+* top-down
+  * create a big value set with all possible values
+  * apply a filter to constrain into subsets
+* bottom-up
+  * create individual value sets
+  * combine into bigger ones
+
+> What is the best way forward?

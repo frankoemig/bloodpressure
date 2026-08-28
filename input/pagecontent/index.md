@@ -57,6 +57,18 @@ Therefore, this project will proceed according to the following steps:
   * [v2.x](v2.html)
   * [V3/CDA](cda.html)
   * [FHIR](fhir.html)
+6. testing
+
+### Abstraction
+
+The information shall not only be used in the technology binding, but also for the representation within
+the different hospital information systems:
+
+![Abstraction](abstraction.png){:height="400px"}
+<br clear="all"/>  
+
+In the end, this will decide whether the sending resp. receiving system is capable of processing the data (Information)
+without losing details.
 
 #### Requirements / Targets
 

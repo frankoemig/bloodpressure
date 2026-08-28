@@ -14,15 +14,21 @@ class "Class 2" as c2 {
  
 class "related Class" as rel
 
-class "Component 1" as comp1
-class "Component 2" as comp2
+class "composited\nClass" as comp1
+class "aggregated\nClass" as comp2
+
+class "related to relationship" as relcls {
+    attributes for this specific relationship
+}
 
 abs <|-- c1
 abs <|-- c2
 
-abs "a..b" -- "m..n" rel : < to abstract
+abs "a..b" -right- "m..n" rel : < to abstract
 
 rel *-- comp1
 rel o-- comp2
+
+(abs,rel) .. relcls
 
 @enduml

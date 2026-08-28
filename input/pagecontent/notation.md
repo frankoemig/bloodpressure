@@ -20,9 +20,17 @@ It should help to read and understand the models, especially the class diagrams:
 * "generalAttribute" is an attribute in the abstract class, that is inherited to the specialisations.
 * "specialAttributeForClass" is an attribute that is valid in this class, and perhaps inherited to further specialised classes.
 * "related Class" is a class that is somehow related to "Abstract Class", i.e. with the class to which the connection goes.
-* "Component 1" is a component of "related class", and it can exist on its own, i.e. independent from "related class".
-* "Component 2" is also a component of "related class", but it depends in its existence on the existence of "related class".
+* Aggregation: 
+  * It represents a "part of" relationship.
+  * this class is part of "related class".
+  * Many instances (denoted by the *) of Class2 can be associated with Class1.
+  * Objects of "related class" and tis class have separate lifetimes.
+* Composition: 
+  * A special type of aggregation where parts are destroyed when the whole is destroyed.
+  * Objects of this class live and die with "related class".
+  * Class2 cannot stand by itself.
 * "to abstract" with the small arrows denotes the direction of the connection/relationship.
 * "a..b" denotes the cardinality of "abstract class" for each element of "related class" element. For example, each "related class" instance can have "a" to "b" related "abstract class" instances.
 * "m..n" denotes the cardinality of "related element" for each element of "abstract class".
 * Classes can be grouped together to help with reading.
+* the related class is a set of information the belongs to the relationship between the two associated classes
