@@ -5,7 +5,7 @@ table tr:nth-child(odd) {background: #FFF}
 </style>
 
 
-#### Step 4b: Template (with CDA)
+### Step 4b: Template (with CDA)
 
 Unfortunately, PlantUML does not allow for drawing the classes as it has been done with Visio.
 Therefore, it has been adopted and colorized as closely as possible.

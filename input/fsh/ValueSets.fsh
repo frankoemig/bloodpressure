@@ -146,7 +146,7 @@ Description: """Codes to document Blood Pressure Body Position Core"""
 
 
 ValueSet: BodyPositionExtended
-Id: body-position-xtended
+Id: body-position-extended
 Title: "Blood Pressure Body Position Extended"
 Description: """Codes to document Blood Pressure Body Position Extended"""
 
@@ -187,11 +187,11 @@ Id: body-position
 Title: "Blood Pressure Body Position"
 Description: """Codes to document Blood Pressure Body Position"""
 
-* ^url = "http://bloodpressure.oemig.de/fhir/ValueSet/body_position"
+* ^url = "http://bloodpressure.oemig.de/fhir/ValueSet/body-position"
 * ^version = "0.1.0"
 * ^status = #draft
 * ^experimental = true
 
 
-* ^compose.include[+].system = "http://bloodpressure.oemig.de/fhir/ValueSet/body_position_core"
-* ^compose.include[+].system = "http://bloodpressure.oemig.de/fhir/ValueSet/body_position_extended"
+* ^compose.include[+].system = "http://bloodpressure.oemig.de/fhir/ValueSet/body-position-core"
+* ^compose.include[+].system = "http://bloodpressure.oemig.de/fhir/ValueSet/body-position-extended"

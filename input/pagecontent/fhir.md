@@ -4,9 +4,7 @@ table tr:nth-child(even) {background: #EEE}
 table tr:nth-child(odd) {background: #FFF}
 </style>
 
-
-
-#### Step 4a: Profile (with FHIR)
+### Step 4a: Profile (with FHIR)
 
 The following diagram explores about how blood pressure can be profiled if the Observation Resource is the foundation.
 Again, this drawing is somehow abstract:

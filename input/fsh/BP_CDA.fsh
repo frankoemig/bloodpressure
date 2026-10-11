@@ -86,7 +86,7 @@ Description: "This is a draft **LM for CDA**. (It still requires modifications c
     * value 0..* CodeableConcept "exertion during measurement"
     * value from http://bloodpressure.oemig.de/fhir/ValueSet/Location (required)
 
-  * consciousness 0..1 CodeableConcept "sleep status during measurement"
+  * consciousness 0..1 BackboneElement "sleep status during measurement"
     * classCode 1..1 CodeableConcept "class code"
     * classCode = http://bloodpressure.oemig.de/fhir/CodeSystem/ObservationCodes#consciousness
     * value 0..* CodeableConcept "exertion during measurement"

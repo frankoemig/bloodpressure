@@ -72,7 +72,7 @@ The D-MIM has to be included replacing the
 {% include its_CDA.svg %}
 </div>
 
-## Binding to terminologies
+### Binding to terminologies
 
 The terminology needed should be identical for each ITS because an ITS does not make any assumption about codes.
 It should be sufficien to hook them in.
